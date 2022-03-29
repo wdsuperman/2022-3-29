@@ -1,0 +1,97 @@
+/* pages/index/release.wxss */
+page {
+    padding-bottom: 50rpx;
+}
+
+.inp {
+    font-size: 30rpx;
+    margin-top: 20rpx;
+}
+
+.wrap {
+    width: 690rpx;
+    margin: 0 auto;
+}
+
+input {
+    height: 70rpx;
+    width: 100%;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    line-height: 48rpx;
+    font-size: 28rpx;
+    width: 695rpx;
+    height: 202rpx;
+    background-color: #fbf7f8;
+    border-radius: 5rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    margin-top: 15rpx;
+}
+
+/* .inp image{
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 10rpx;
+    background-color: #ddd;
+    margin-top: 30rpx;
+} */
+.btn {
+    width: 670rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80rpx;
+}
+
+.btn>button {
+    width: 300rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    border-radius: 45rpx;
+    font-size: 30rpx;
+}
+
+.b1 {
+    background-image: linear-gradient(179deg,
+            #fc6065 0%,
+            #f3454b 100%),
+        linear-gradient(#e60012,
+            #e60012);
+    color: #ffffff;
+}
+
+.b2 {
+    background-color: #eeeeee;
+    color: #8b8b8b;
+}
+
+button::after {
+    border: 0;
+}
+
+radio-group {
+    width: 670rpx;
+    margin: 0 auto;
+    margin-top: 50rpx;
+}
+
+radio {
+    width: 100%;
+    border-bottom: 2rpx solid #f3f3f3;
+    height: 84rpx;
+    line-height: 84rpx;
+    font-size: 30rpx;
+    color: #4b4b4b;
+}
+
+.wux-upload {
+    margin-top: 20rpx;
+}

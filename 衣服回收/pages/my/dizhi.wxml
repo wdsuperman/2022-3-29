@@ -1,0 +1,28 @@
+<!--pages/my/dizhi.wxml-->
+<!-- 没有地址显示 -->
+<view wx:if='{{!address.length}}'>
+	<image class="dzIcon" src="/images/dz_1.jpg"></image>
+	<view class="noneDz mt30">您还没有收货地址</view>
+	<view class="noneDz">点击添加收货地址吧~</view>
+</view>
+<!-- 没有地址显示 -->
+<view wx:else>
+	<view wx:for='{{address}}' class="dzLists">
+	   <view class="df">
+			<view class=" w70" bindtap="qr"   data-id="{{item.id}}" data-address_xq="{{item.address_xq}}">
+				<view class="mt10">
+					<text class="name">{{item.name}}</text>
+					<text class="tel">{{item.tel}}</text>
+				</view>
+				<view class="dizhi df flex-start mt10"><view wx:if='{{item.is_default==1}}' class="moren">默认</view>{{item.address_xq}}</view>
+			</view>
+			<image class="w30" bindtap="add" data-id="{{item.id}}" src="/images/dz_1.png"></image>
+	   </view>
+	   <view class="df"> 
+	       <image bindtap="click" data-type="is_default"  data-id="{{item.id}}" data-is_default="{{item.is_default}}" data-index="{{index}}" src="/images/{{item.is_default==1?'dz_3':'dz_2'}}.png"  />  
+	       <view class="del " bindtap="click" data-type="del" data-id="{{item.id}}" data-index="{{index}}">删除</view></view>
+	</view>
+</view>
+<button bindtap="add" class="tc">
+	添 加 地 址
+</button>

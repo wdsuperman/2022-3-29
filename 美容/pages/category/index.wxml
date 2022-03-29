@@ -1,0 +1,31 @@
+<view class="wrap">
+    <view class="left">
+        <view catchtap="click" data-id="{{item.id}}" class="{{item.type == true ? 'active' : ''}}" wx:for="{{tab}}" wx:key='key'>
+            {{item.name}}
+            <block wx:if="{{item.type}}">
+                <view wx:for='{{cidlist}}'  catchtap="click1" data-id="{{item.id}}" class="cidlist {{item.type == true ? 'active1' : ''}}">
+                    {{item.name}}
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <scroll-view scroll-y bindscrolltolower='scroll' scroll-top='{{scrollTop}}'>
+        <view class="list">
+            <view wx:for="{{list}}" wx:key="key" bindtap="productId" data-productId="{{item.id}}">
+                <image class="img" src="{{item.photo_x}}"></image>
+                <view class="title">{{item.name}}</view>
+                <view class="jf">积分抵扣{{item.pro_jf}}</view>
+                <view class="aot">
+                    <view class="price">
+                        <text>￥</text>{{item.price}}
+                    </view>
+                    <view class="buy">购买</view>
+                </view>
+                <view class="info">
+                    <image class="logo" src="{{item.logo}}"></image>{{item.shop_name}} <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

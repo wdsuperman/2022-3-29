@@ -1,0 +1,205 @@
+<!--pay.wxml-->
+
+
+<wxs module="filters" src="addmul.wxs"></wxs>
+
+<view class="block font_14">
+  <view bindtap="goToAddress" class="address-picker flex-row" hoverClass="none">
+    <view class="flex-grow-1" wx:if="{{address}}">
+      <view class="flex-row" style="margin-bottom: 20rpx">
+        <view class="flex-grow-1">收货人：{{address.name}}</view>
+        <view class="flex-grow-0">{{address.tel}}</view>
+      </view>
+      <view style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis">
+        收货地址：{{address.address_xq}}</view>
+    </view>
+    <view class="flex-grow-1" wx:else>
+      <view style="color:#ff4544">请选择收货地址</view>
+    </view>
+    <view class="flex-grow-0 flex-y-center">
+      <image src="../../images/icon-jiantou-r.png" style="width: 12rpx; height: 22rpx;margin-left: 24rpx"></image>
+    </view>
+  </view>
+  <view class="address-bg-img flex-row">
+    <image src="../../images/pt-addres-top.png"></image>
+  </view>
+</view>
+
+
+  <view class='main' wx:for="{{productData}}">
+    <view class='car_bottom'>
+      <view class='car_bottom_inner'>
+        <view class='car_bottom_pic'>
+          <image src='{{item.photo_x}}'></image>
+        </view>
+        <view class='content'>
+          <view class='content_title'>{{item.name}}</view>
+          <view class='content_keshi'>规格： {{item.gidname}}</view>
+          <view class='main_content'>
+            <view class='main_content_num'>
+              <view class='main_content_num_icon'>￥</view>
+              <view class='main_content_num_num'>{{item.price}}</view>
+              <view class='num_num'>X {{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='shops_all'>
+    共{{num}}件商品
+    <!-- <view class='shops_all_txt'>共{{num}}件商品</view> -->
+    <!-- <view class='xiaoji'>小计：</view>
+  <view class='main_content_num' style='width:50rpx;'>
+    <view class='main_content_num_icon'>￥</view>
+    <view class='main_content_num_num'>{{total}}</view>
+  </view> -->
+    <!-- <block wx:if="{{yftype==1}}">
+    <view class='xiaoji' >邮费：</view>
+    <view class='main_content_num' style='width:50rpx;'>
+      <view class='main_content_num_icon'>￥</view>
+      <view class='main_content_num_num'>12</view>
+    </view>
+  </block> -->
+  </view>
+  <view  style="padding:2%;font-size:12px;text-align:right;color:red">
+    * 鲜花订单满300元发货
+  </view>
+
+  <view style="margin-bottom:20rpx;">
+    <view bindtap="showCouponPicker" class="flex-row flex-y-center border-bottom" data-index="{{index}}"
+      style="background: #fff;padding: 0 24rpx;height: 90rpx;">
+      <view class="flex-grow-1 font_14">优惠券</view>
+      <view class="flex-grow-0 font_14">
+        <view style="color: #888" wx:if="{{vou==''}}">目前无可用优惠券</view>
+        <block wx:else>
+          <view style="color: #ff4544" wx:if="{{vou_price>0}}">-{{vou_price}}元</view>
+          <view style="color: #ff4544" wx:else>有{{vou.length}}张优惠券可以使用</view>
+        </block>
+      </view>
+      <view class="flex-grow-0">
+        <image src="../../images/icon-jiantou-r.png" style="width: 12rpx;height: 22rpx;margin-left: 12rpx"></image>
+      </view>
+    </view>
+    <!-- 店铺红包 -->
+    <!-- <view class='or' wx:if="{{pro_jf}}">
+      <view class='or_txt  w60' style='padding-left:10px;' >使用{{user.jifen}}积分抵扣<span style='color:red;'>{{pro_jf}}元</span>  </view>
+    <view class='w20'></view>
+      <switch  bindtap="{{o}}" class="flex-y-center" style="height:44rpx;zoom:.6;"></switch>
+    </view> -->
+    <view class="flex-row flex-y-center border-bottom font_14" style="background: #fff;padding: 0 24rpx;height: 90rpx;"
+      wx:if="{{pro_jf}}">
+      <view class="flex-grow-1 flex-y-center">
+        <block wx:if="{{pro_jf>=total}}">
+          <view class="flex-y-center">使用{{total*100-1}}积分抵扣</view>
+          <view class="flex-y-center" style="color:#ff4544">{{total-0.01}}</view>
+          <view class="flex-y-center">元</view>
+        </block>
+        <block wx:else>
+          <view class="flex-y-center">使用{{user.jifen}}积分抵扣</view>
+          <view class="flex-y-center" style="color:#ff4544">{{pro_jf}}</view>
+          <view class="flex-y-center">元</view>
+        </block>
+        
+        <!-- <view bindtap="integration" class="flex-y-center">
+          <image src="../../images/icon-jiantou-r.png" style="width: 36rpx;height: 36rpx;margin-left: 12rpx"></image>
+        </view> -->
+      </view>
+    
+      <view class="flex-grow-0 flex-y-center integral-switch" data-index="1">
+        <block wx:if="{{pro_jf>=total}}">
+          <switch  bindtap="{{o}}" data-jf_price="{{total-0.01}}" class="flex-y-center" style="height:44rpx;zoom:.6;"></switch>
+        </block>
+        <block wx:else>
+          <switch  bindtap="{{o}}" data-jf_price="{{pro_jf}}" class="flex-y-center" style="height:44rpx;zoom:.6;"></switch>
+        </block>
+        <!-- <switch  bindtap="{{o}}" class="flex-y-center" style="height:44rpx;zoom:.6;"></switch> -->
+      </view>
+    </view>
+  </view>
+
+  <!-- 收货地址 -->
+  <view class="p_all bg_white mt10 font_14" style='border:1px solid #eeeeee;'>
+    <textarea class="min_60" auto-height name="remark" placeholder="备注" bindinput="remarkInput" value="{{remark}}" />
+  </view>	
+<view class="mt10"  style="height:150rpx;">
+  <view class='or' wx:if="{{user.dengji!='0'}}">
+  <view class='or_txt  w30' style='padding-left:10px;'>{{user.dengji_name}}折扣 </view><view class='w30'></view>
+    <view class='w30' style='text-align: right;' wx:if="{{yhprice=='1'}}">折扣：
+    <span style='color:red;' wx:if="{{user.zhekou=='0'}}">0元</span>
+    <span style='color:red;'wx:else>{{filters.toFix((total-pro_jf)*user.zhekou/100)}}元</span> 
+    </view>
+    <view class='w30' style='text-align: right;' wx:else>折扣：<span style='color:red;' wx:if="{{user.zhekou=='0'}}">0元</span>  
+    <span style='color:red;' wx:else>{{filters.toFix(total*user.zhekou/100)}}q元</span> </view>
+  </view>
+  <view class='or'>
+  <view class='or_txt  w30' style='padding-left:10px;'>实付金额 </view><view class='w30'></view>
+    <view class='w30' style='text-align: right;' wx:if="{{yhprice=='1'}}">合计：
+    <span style='color:red;fon-size:15px;font-weight:bold' wx:if="{{user.zhekou=='0'}}">{{filters.toFix(total-jf_price-((total-jf_price)*user.zhekou/100))}}元</span>
+    <span style='color:red;fon-size:15px;font-weight:bold' wx:else>{{filters.toFix(total-pro_jf-((total-pro_jf)*user.zhekou/100))}}元</span> 
+    </view>
+    <view class='w30' style='text-align: right;font-weight:bold' wx:else>合计：<span style='color:red;' wx:if="{{user.zhekou=='0'}}">{{total}}元</span> 
+    <span style='color:red;font-weight:bold' wx:else>{{filters.toFix(total-(total*user.zhekou/100))}}g元</span> </view>
+  </view>
+</view>	  
+
+<view wx:if="{{total<=user_recharge}}"  >
+  <view class="wechat" style='display:flex'>
+    <view bindtap="createProductOrderByWX" data-type='yue' style='width:50%;border-right:1px solid ;'>余额结算 </view> 
+    <view bindtap="createProductOrderByWX"  style='width:50%;' data-type='weixin'>微信支付 </view>
+  </view>
+</view>
+<view class='wechat' wx:else>
+  <view bindtap="createProductOrderByWX"   data-type='weixin'>微信支付</view>
+</view>
+<!-- 弹窗填写密码 -->
+<view class='more_more' style='display:{{xs_mima}};align-items: center;justify-content: center;flex-direction: column;' >
+ <view class="flex_Center" style="width:331px;height:220px;background:white;color:#333;font-size:16px;border-radius:11px;margin:auto;margin-top:50%;"> 
+  <span style="font-size:22px; position: absolute;top:33%;right:16%;" bindtap="hidden">X</span>
+  <form   bindsubmit="yue_pay">
+    填写登录密码：<input name='password' type='text' style='padding-top:10px;' placeholder='请输入登入密码' ></input>
+    <button class='bntmma' formType="submit">提交</button>
+  </form>   
+  </view>
+</view>
+
+<!-- 优惠券列表 -->
+<view class="coupon-picker" wx:if="{{show_coupon_picker}}">
+  <scroll-view class="coupon-list" scrollY="true" style="height: 100%">
+    <view style="color: #888;font-size: 9pt;margin-bottom: 20rpx;line-height: 1.35">
+      注：优惠券只能抵消商品金额，不能抵消运费，商品金额最多优惠到0.01元
+    </view>
+    <view bindtap="getvou" class="flex-y-center flex-x-center" data-id="0"  data-price="0"
+      style="height: 80rpx;margin-bottom: 24rpx;color: #888;border: 1rpx solid #e3e3e3;border-radius: 10rpx">不使用优惠券
+    </view>
+    <view bindtap="getvou" class="coupon-item  coupon-status-0"  data-id="{{item.vid}}"
+      data-price="{{item.amount}}" wx:for="{{vou}}" wx:key="{{item.id}}">
+      <image class="coupon-bg" src="/images/img-coupon-bg-0.png"></image>
+      <!-- <image class="coupon-status-icon" src="/images/img-coupon-status-icon-{{item.status}}.png"
+        wx:if="{{item.status!=0}}"></image> -->
+      <view class="flex-row" style="height: 100%;overflow: hidden">
+        <view class="flex-grow-0 flex-col flex-y-center flex-x-center coupon-left">
+          <view class="flex-row flex-y-bottom">
+            <view style="font-size: 9pt">￥</view>
+            <view style="font-size: {{item.amount.length>4?'13':'19'}}pt;line-height: .9">
+               {{item.amount}}
+            </view>
+          </view>
+          <view></view>
+          <view style="font-size: 8pt;margin-top: 10rpx ;display:block;">满{{item.full_money}}可用</view>
+        </view>
+        <view class="flex-grow-1 flex-y-center coupon-right">
+          <view style="width: 100%">
+            <view class="flex-row flex-y-center mb-10">
+              <view class="flex-grow-1" style="font-size: 13pt;font-weight: bold">领券中心
+              </view>
+              <view class="flex-grow-0" style="font-size: 9pt"></view>
+            </view>
+            <view style="font-size: 8pt;color: #888">{{item.start_time}} ~ {{item.end_time}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/user/shoucang.wxml-->
+
+<view class='main'>
+    <view class="search_no" wx:if="{{!productData.length}}">
+            <view class="font_14"><image class="scimg" src="/images/search_no.png"></image></view>
+            <text>暂时还没有收藏/(ㄒoㄒ)/~~</text>
+        </view> 
+  <view class='item' wx:for="{{productData}}" catchtap='product' data-productid='{{item.pid}}'>
+    <view class='item_pic'><image src='{{item.photo}}'></image></view>
+    <view class='item_content'>
+      <view class='content_title'>{{item.pro_name}}</view>
+      <view class='content_num'>534人收藏</view>
+      <view class='money'>
+        <view class='moneyIcon'>￥</view>
+        <view class='moneyNum'>{{item.price}}</view>
+        <view class='delete' style='z-index:888' data-favId="{{item.id}}" catchtap="removeFavorites"><image src='{{url}}/delete.png'></image></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+

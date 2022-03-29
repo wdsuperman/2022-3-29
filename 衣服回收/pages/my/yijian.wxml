@@ -1,0 +1,29 @@
+<!--pages/my/yijian.wxml-->
+<form bindsubmit='submit'>
+	<view class="list">
+		<view>联系电话</view>
+		<input placeholder="请填写联系电话" name='tel' maxlength="11" type="number"></input>
+	</view>
+	<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+		<view class="list picker">
+			<view>意见类型</view>
+			<view class="pick">
+				{{array[index]}}
+				<image src="/images/arrow.png" class="arrow"></image>
+			</view>
+		</view>
+	</picker>
+	<textarea placeholder="请填写您的意见或建议" name='yijian'></textarea>
+	<view class="listWrap">
+		<view class="line">上传图片</view>
+		<view class="update" bindtap="update" wx:if='{{!img}}'>
+			<image src="/images/add.png" class="add"></image>
+			<view>选择图片</view>
+		</view>
+		<view wx:else class="posi">
+			<image src="{{img}}" class="upImg" bindtap="fd"></image>
+      <image src="/images/del.png" bindtap="del" class="del"></image>
+	</view>
+	</view>
+	<button form-type="submit">提交</button>
+</form>

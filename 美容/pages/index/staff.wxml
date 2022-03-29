@@ -1,0 +1,46 @@
+<view class="downList">
+    <image class="userAvatar"></image>
+    <view class="info1">
+        <view class="name1">名字<text class="occupation">职业</text></view>
+        <view class="starImg">
+            <image class="star1" src="/images/star.png"></image> <text class="yy">101预约</text>
+        </view>
+    </view>
+    <view class="icon">V认证</view>
+</view>
+<view class="sc"><text>擅长项目</text>：面部护理</view>
+<view class="address">
+    <view>
+        <view>地址</view>
+        <view class="xxdz">详细地址</view>
+    </view>
+    <view class="tel">
+        <view class="tel1">
+            <image></image>
+            <view>打车</view>
+        </view>
+        <view>
+            <image></image>
+            <view>电话</view>
+        </view>
+    </view>
+</view>
+<view class="tab">
+    <view>热卖商品</view>
+    <view>同店推荐</view>
+    <view>口碑精选</view>
+</view>
+<view class="down1">
+    <view class="down2List">
+        <image class="downPic"></image>
+        <view class="down2listMsg">
+            <view class="shopName">标题标题</view>
+            <view class="shopPrice"><text class="money">￥</text>300 <text class="shopdk">积分抵扣20</text></view>
+            <view class="xf"><text class="peo">消费123</text><text class="buy">购买</text></view>
+            <view class="shopTitle">
+                <image class="logo"></image><text class="peo">店铺名</text>
+                <image class="arw"></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/index/cate.wxml-->
+<view class="bj"></view>
+
+<view class="con">
+    <view class="title df">
+        <view>回收类别</view>
+       
+        <view class="zx df">  <image src="/images/cate_1.jpg"/>详情类别课咨询客服</view>
+    </view>
+    <view class="df flex-start">
+        <view wx:for="{{list}}" wx:key="item" class="list">
+          <image src="{{item.photo}}"/>
+          <view> {{item.name}}</view>
+        </view>
+    </view>
+   
+</view>
+
+<fuchuang  fromFather="200rpx"/>
+
+<view class="click" bindtap="click">
+立刻下单
+</view>
+

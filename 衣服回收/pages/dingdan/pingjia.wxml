@@ -1,0 +1,24 @@
+<!--pages/dingdan/pingjia.wxml-->
+<view class="top">
+	<view class="bianhao">订单编号：{{info.order_num}}</view>
+	<view>订单完成时间:{{info.finishtime}}</view>
+	<view>废品类型:{{info.lx}}</view>
+	<view>预计重量:{{info.assess}}</view>
+</view>
+<view class="img">
+   <block wx:if="{{stars.length}}">
+     	<image wx:for='{{stars}}'  src="/images/{{item=='true'  ?'star1.png':'star.png'}}"></image>
+   </block>
+   <block wx:else>
+      	<image wx:for='{{star}}' bindtap="star" data-index="{{index}}" src="/images/{{item ?'star1.png':'star.png'}}"></image>
+   </block>
+
+</view>
+<form bindsubmit="submit">
+	<textarea name='pingjia' value="{{pingjia}}" placeholder="您的好评是我们不断进步的动力哟~"></textarea>
+  <block wx:if="{{but}}">
+    	<button form-type="submit" >提交</button>
+  </block>
+
+</form>
+<view class="line"></view>

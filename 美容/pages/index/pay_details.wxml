@@ -1,0 +1,54 @@
+<!--pages/index/pay_details.wxml-->
+<image class="banner">
+
+</image>
+
+<view class="bg">
+    <view class="top">
+        <image class="logo"></image>
+        <view>
+            <view class="title">
+                <view>标题</view>
+                <image class="icon"></image>
+            </view>
+            <view class="pf">
+                <image class="star" src="/images/star.png"></image>
+                3.5
+            </view>
+        </view>
+    </view>
+    <view class="zizhi">
+        <view>
+            <image></image>
+            文字文字
+        </view>
+        <view>
+            <image></image>
+            文字文字
+        </view>
+        <view>
+            <image></image>
+            文字文字
+        </view>
+        <view>
+            <image></image>
+            文字文字
+        </view>
+    </view>
+    <view class="address">
+        <view>
+            <view>地址</view>
+            <view class="xxdz">详细地址</view>
+        </view>
+        <view class="tel">
+            <view class="tel1">
+                <image></image>
+                <view>打车</view>
+            </view>
+            <view>
+                <image></image>
+                <view>电话</view>
+            </view>
+        </view>
+    </view>
+</view>

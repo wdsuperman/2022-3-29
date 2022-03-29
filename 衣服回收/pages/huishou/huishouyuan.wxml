@@ -1,0 +1,13 @@
+<!--pages/my/huishouyuan.wxml-->
+<image class="banner" src="/images/banner.jpg"></image>
+<form bindsubmit="submit">
+	<view class="inp">
+    <image class="icon" src="/images/zhanghao.png"></image>
+		<input placeholder="请输入账号" name='zhanghao'></input>
+	</view>
+	<view class="inp">
+    <image class="icon" src="/images/mima.png"></image>
+		<input placeholder="请输入密码" password="true" name='mima'></input></view>
+	<button form-type="submit" class="submit">登录</button>
+</form>
+<button bindtap="ruzhu">回收员入驻</button>

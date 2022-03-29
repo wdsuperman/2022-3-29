@@ -1,0 +1,34 @@
+<!--pages/dingdan/dingdan.wxml-->
+<view class="tab">
+	<view wx:for='{{tab}}' bindtap="clickTab" wx:key='key' data-type="{{item.type}}" class="tabText {{item.status ? 'active' : ''}}">
+		{{item.title}}
+	</view>
+</view>
+<view class="lists" wx:if='{{list.length}}'>
+    <view class="ddl">{{isStatus ==0? '未接单': isStatus == 1? '已接单' :isStatus == 2? '已完成' : isStatus == 3 ? '已取消':''}}订单量：{{list.length}}</view>
+	<view wx:for='{{list}}' wx:key='key' class="list" bindtap="detail" data-oid="{{item.id}}">
+		<view class="listTop">
+			<view class="topLeft">
+        <view>订单编号:{{item.order_num}}</view>
+				<view>下单时间:{{item.addtime}}</view>
+    
+      </view>
+			<view class="topRight {{item.desc =='未接单' ? 'wjd' : item.desc =='已接单' ? 'yjd' : item.desc =='已完成' ? 'ywc' :item.desc =='已取消' ? 'yqx':''}}">· {{item.desc}}</view>
+		</view>
+		<view class="info">
+			<view>期望上门时间:{{item.date}}</view>
+			<view>废品类型:{{item.lx}}</view>
+			<view>预计重量:{{item.assess}}</view>
+		</view>
+		<view class="btnLists">
+		  	<button wx:if='{{item.desc == "未接单"}}' class="quxiao" catchtap="quxiao" data-oid="{{item.id}}" data-index="{{index}}">接单</button>
+        <button wx:if='{{item.desc == "已接单"}}' class="share" catchtap="share" data-oid="{{item.id}}" data-index="{{index}}">完成订单</button>
+        <button class="contact" catchtap="contact" data-oid="{{item.id}}">订单详情</button>
+			
+		</view>
+	</view>
+</view>
+<view wx:else>
+    <image style="width:413rpx;height:290rpx;display:block;margin:40% auto auto auto;" src="/images/none.png"></image>
+    <view style="color:#999;font-size:26rpx;margin-top:20rpx;text-align:center;">目前暂无订单哦~</view>
+</view>

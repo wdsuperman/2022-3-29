@@ -1,0 +1,167 @@
+page {
+  background-color: #f1f1f1;
+  margin-bottom: 20rpx;
+}
+
+swiper {
+  width: 90%;
+  height: 250rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 20rpx;
+  margin-left: -45%;
+  left: 50%;
+}
+
+.top {
+  height: 190rpx;
+  background-color: #c8431a;
+  border-radius: 0 0 10% 10%;
+  margin-bottom: 110rpx;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*分类s  */
+.fl {
+  margin-top: 20rpx;
+  width: 90%;
+  padding: 5%;
+  background-color: #fff;
+}
+
+.cyfw_list {
+  width: 20%;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+}
+
+.cyfw_list image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.logo {
+  width: 190rpx;
+  height: 210rpx;
+}
+
+.flex-end {
+  align-items: flex-end;
+  margin-top: 10rpx;
+}
+
+/*分类f  */
+/* 处理与去向s */
+.clandqx {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+
+}
+
+.line {
+  border-bottom: 3rpx solid #efefef;
+}
+
+.clandqx .title {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.clandqx image {
+  height: 270rpx;
+}
+
+.sTitle {
+  color: #939393;
+  font-size: 24rpx;
+  text-align: right;
+}
+
+.t1 {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.t2 {
+  font-size: 24rpx;
+  color: #939393;
+  margin: 10rpx 0;
+}
+
+/*处理与去向f  */
+.gonggao {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.gonggao image {
+  width: 35rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+}
+.clandqx .btn{
+  width: 433rpx;
+  height: 77rpx;
+  margin-left: 19%;
+  margin-top: 20rpx;
+}
+.img{
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+.img image{
+  width: 55rpx;
+  height: 55rpx;
+  margin: 20rpx auto;
+  display: block;
+}
+.img .dian{
+  width: 50rpx;
+  height: 8rpx;
+  margin-top: 50rpx;
+}
+.cn{
+  flex-wrap: wrap;
+  font-size: 24rpx;
+  color: #999;
+}
+.cn image{
+  width: 77rpx;
+  height: 77rpx;
+}
+.cn>view{
+  display: flex;
+  align-items: center;
+  width: 48%;
+  justify-content: space-between;
+  box-shadow: 0rpx 0rpx 20rpx 5rpx #eee;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.t1{
+  font-weight: bold;
+  font-size: 28rpx;
+  color: #000;
+}

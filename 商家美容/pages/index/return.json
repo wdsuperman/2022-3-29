@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet"
+  },
+  "navigationBarTitleText": "退货管理"
+}

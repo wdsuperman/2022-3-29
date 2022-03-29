@@ -1,0 +1,121 @@
+/* 
+page{
+    background-color: #f4f4f6;
+}
+.title{
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 80rpx;
+}
+.num{
+    font-size: 78rpx;
+    text-align: center;
+    color: #fd5344;
+    font-weight: bold;
+}
+.top{
+    background-color: #fff;
+    padding-bottom: 50rpx;
+}
+.mid{
+    background-color: #fafafa;
+    border-top: 1rpx solid #e3e3e3;
+    border-bottom: 1rpx solid #e3e3e3;
+    height: 78rpx;
+    line-height: 78rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding:0 30rpx;
+    font-size: 28rpx;
+}
+.mid text{
+    color: #e1372a;
+}
+.list image{
+    width: 10rpx;
+    height: 20rpx;
+}
+.list>view{
+    display: flex;
+    padding:25rpx;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #e2e2e2;
+    font-size: 28rpx;
+    line-height: 48rpx;
+}
+.list{
+    background-color: #fff;
+    
+}
+.time{
+    color: #b5b5b5;
+} */
+
+/* pages/yongjinmingxi/yongjinmingxi.wxss */
+
+.main{
+    width: 750rpx;
+  }
+  .allmoney{
+    height: 240rpx;
+    width: 750rpx;
+    text-align: center;
+    padding-top: 50rpx;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #d4d4d4;
+  }
+  .allmoney_text{
+    font-size: 28rpx;
+  }
+  .allmoney_num{
+    font-size: 72rpx;
+    color: #2a77f9;
+  }
+  .mingxi{
+    height: 79rpx;
+    width: 750rpx;
+    font-size: 27rpx;
+    line-height: 79rpx;
+    border-bottom: 1rpx solid #d4d4d4;
+    padding:0 54rpx 0 29rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .mingxi_right{
+    float: right;
+  }
+  .mingxi_text{
+    float: left;
+  }
+  .money_item{
+    /* height: 133rpx; */
+    width: 750rpx;
+    padding: 32rpx 30rpx 0 24rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1rpx solid #d4d4d4;
+  }
+  .money_item_left{
+    float: left;
+    font-size: 29rpx;
+  }
+  .money_left_date{
+    margin-top: 5rpx;
+    color: #b7b7b7;
+  }
+  .money_item_right{
+    float: right;
+    display: flex;
+    color: #2a77f9;
+    font-size: 25rpx;
+    line-height: 50rpx;
+  }
+  .money_right_right{
+    color: #acacc0;
+    margin-left: 18rpx;
+  
+  }

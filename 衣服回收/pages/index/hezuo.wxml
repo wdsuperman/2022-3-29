@@ -1,0 +1,46 @@
+<form bindsubmit='submit'>
+	<view class="wrap">
+		<view class="inp">
+			<view class="inpText">姓名</view>
+			<input name='name' placeholder-class="place-holder"   placeholder="请写联系人"></input>
+		</view>
+		<view class="inp">
+			<view class="inpText">联系电话</view>
+			<input name='tel' placeholder-class="place-holder" maxlength="11" type="number"  placeholder="请输入联系电话"></input>
+		</view>
+        <view class="inp">
+			<view class="inpText">身份证号</view>
+			<input name='sfz' placeholder-class="place-holder"   placeholder="身份证号有英文请填写大写英文"></input>
+		</view>
+        <view class="inp">
+			<view class="inpText">加盟商名称</view>
+			<input name='jm_name' placeholder-class="place-holder"   placeholder="请写加盟商名称"></input>
+		</view>
+		<view class="inp">
+			<view class="inpText">省份</view>
+			<picker bindchange="bindPickerChangechina" value="{{shengArr[shengIndex].id}}" range="{{shengArr}}" range-key="{{'name'}}" data-type="1">
+				{{shengNull?shengArr[shengIndex].name:'--请选择--'}}
+			</picker>
+		</view>
+		<view class="inp">
+			<view class="inpText">城市</view>
+			<picker bindchange="bindPickerChangechina" value="{{shiIndex}}" range-key="{{'name'}}" range="{{shiArr}}"  data-type="2">
+				{{shiNull?shiArr[shiIndex].name:'--请选择--'}}
+			</picker>
+		</view>
+		<view class="inp">
+			<view class="inpText">地区</view>
+			<picker bindchange="bindPickerChangechina" value="{{quIndex}}"  range-key="{{'name'}}" range="{{quArr}}"  data-type="3">
+			    {{quNull?quArr[quIndex].name:'--请选择--'}}
+			</picker>
+		</view>
+        
+        <view class="inp">
+            <view class="inpText">身份证图片</view>
+            <image bindtap='zheng' class="sfz"  src="{{imgzheng==''?'/images/sfz.png':imgzheng}}"></image>
+        </view>
+	</view>
+	<button form-type="submit">
+	   申请成为加盟商
+	</button>
+</form>

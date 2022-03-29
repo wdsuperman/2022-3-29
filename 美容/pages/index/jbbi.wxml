@@ -1,0 +1,19 @@
+<view class="top">
+    <view class="title">
+    可用金币
+</view>
+<view class="num">{{jinbi}}</view>
+</view>
+<view class="mid">
+    <view>订单明细</view>
+    <view class="gz">规则说明</view>
+</view>
+<scroll-view scroll-y bindscrolltolower='scroll' class="list">
+    <view wx:for="{{list}}" wx:key='key' class="lists">
+        <view>
+            <view>{{item.name}}</view>
+            <view class="time">{{item.addtime}}</view>
+        </view>
+        <view class="{{type == 10 ? 'get' : 'jn'}}">{{item.price}}</view>
+    </view>
+</scroll-view>

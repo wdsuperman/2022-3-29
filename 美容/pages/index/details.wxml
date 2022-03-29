@@ -1,0 +1,246 @@
+<!-- 
+<image class="img">
+
+</image>
+
+<view class="title">标题</view>
+<view class="info">
+    <view class="price"><text>￥</text>100</view>
+    <view class="jf">积分抵扣10</view>
+    <view class="num">
+        <view>销量：10</view>
+        <view>访问量：10</view>
+    </view>
+    <view class="btn">
+        <button>
+            <image></image>
+            <view>分享</view>
+        </button>
+        <button>
+            <image></image>
+            <view>分享</view>
+        </button>
+    </view>
+</view>
+<view class="goodsinfo">
+    <image class="logo"></image>
+    <view class="gif">
+        <view class="name">标题</view>
+        <view class="address">
+            <image class="icon"></image>地址地址
+        </view>
+    </view>
+    <image class="phone"></image>
+    <view class="jd">进店逛逛</view>
+</view>
+<view class="bottom">
+    <view class="bl">
+        <view>
+            <image></image>
+            <view>首页</view>
+        </view>
+        <view>
+            <image></image>
+            <view>收藏</view>
+        </view>
+    </view>
+    <view class="br">
+        <view class="cart">加入购物车</view>
+        <view class="buy">立即购买</view>
+    </view>
+</view> -->
+<!-- 轮播图 -->
+<view class='banner'>
+  <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{bannerItem}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+  <view class='main'>
+    <view class='main_title' > {{itemData.name}}</view>
+    <!-- <view class='main_subtitle'>购买该商品可用助学红包抵扣{{itemData.pro_jf}}元</view> -->
+    <view class='main_subtitle' style='padding-left:15px;'>{{itemData.dengji_price}}</view>
+    <view class='main_content'>
+      <view class='main_content_num'>
+        <block wx:if="{{itemData.is_hy=='3'}}">
+          <view class='main_content_num_icon' style="padding-left:10px;" ><image src='../../images/hb.png' style='width:60px;height:22px;'></image></view>
+          <view class='main_content_num_num'>{{price}}</view>
+        </block>
+        <block wx:else> 
+          <view class='main_content_num_icon' style="padding-left:10px;" >￥</view>
+          <view class='main_content_num_num'>{{price}}</view>
+          <view class='main_content_num_hongbao'></view>
+        </block>
+        
+        <view class='main_content_num_xiaoliang' style='margin-top:-10px;'>销量： {{itemData.sales}}件
+         <view>访问量：{{itemData.fangwen}}</view></view>
+        <view class='main_content_num_share'>
+          <button open-type='share'  class=' ' style='padding:0;font-size:20rpx;background:#fff;border:0;'>
+            <image src='../../images/shops_share.png'></image>
+            <view class='main_content_num_share_text' style=''>分享</view>
+          </button>  
+        </view>
+        <view class='main_content_num_share_zf' bindtap='formSubmit'>
+         <block class='' >
+            <image src='../../images/zf.png' ></image>
+            <view class='main_content_num_share_text '  style="padding-top:26rpx;">海报</view>
+          </block>
+        </view> 
+      </view>
+    </view>
+      <!-- <view class='main_content_shouhou'>
+        <view class='main_content_shouhou_one'><image src='../../images/shouhou.png'></image><view>正品保障</view></view>
+        <view class='main_content_shouhou_one'><image src='../../images/shouhou.png'></image><view>售后无忧</view></view>
+        <view class='main_content_shouhou_one'><image src='../../images/shouhou.png'></image><view>7天无理由退货</view></view>
+        <view class='main_content_shouhou_one'><view></view></view>
+      </view> -->
+  </view>
+  <view class='xuanze' bindtap='showBuy' wx:if="{{itemData.is_hy=='0'}}">
+    <view class='xuanze1'>选择</view>
+    <view class='xuanze2'>请选择规格</view>
+    <view class='xuanze3'> ＞ </view>
+  </view>
+<!-- <view class='dianpu'>
+  <view class='dianpu1'><view class='dianpu1_pic'><image src='{{shop.logo}}'></image></view><view class='dianpu2'><view class='dianpu3'>{{shop.name}}</view><view class='dianpu4'>{{shop.intro}}</view></view></view>
+  <view class='dianpu_num'>
+    <view class='gaunzhu'><view class='gaunzhu_num'>{{shop.miaoshu}}</view><view class='gaunzhu_txt'>商品描述</view></view>
+    <view class='gaunzhu'><view class='gaunzhu_num'>{{shop.fuwu}}</view><view class='gaunzhu_txt'>卖家服务</view></view>
+    <view class='gaunzhu'><view class='gaunzhu_num'>{{shop.pronum}}</view><view class='gaunzhu_txt'>商品数量</view></view>
+  </view>
+  <view class='dainpu_click' bindtap='shop' data-shopid="{{shop.id}}" data-zxid="{{shop.id}}">
+    <view class='dainpu_click_pic'><image src='../../images/dianpu_mini.png'></image></view>
+    <view class='dianpu_click_txt'>进店逛逛</view>
+  </view>
+</view> -->
+<view class='shop_pingjia'>
+  <view class='shop_pingjia_one' >
+    <view class="shop_pingjia_one_left {{currentTab==0 ? 'shop_pingjia_one_left_this' : ''}}"  data-current="0" bindtap="swichNav" >商品详情</view>
+    <view class="shop_pingjia_one_left {{currentTab==1 ? 'shop_pingjia_one_left_this' : ''}} "  data-current="1" bindtap="swichNav">评价信息</view>
+  </view>  
+</view>
+<!-- 商品详情 -->
+<view class="shopspingjia {{currentTab==0 ? 'action' : ''}} " >
+  <view  style='width:92%;margin:0 auto;overflow:hidden;'>
+    <rich-text nodes="{{content}}"></rich-text>
+  </view>
+</view>
+<!-- 买家评论 -->
+ <view style='display:flex;font-size:14px;color:#999;height:30px;'>
+   <view style='line-height:30px;padding-left:10px;'>所有评论:</view>
+   <view style='line-height:30px;padding-left:58%;' bindtap='pinglun' data-pid='{{itemData.id}}'>
+   <view class="pingjia">评价 </view>
+   </view>
+  </view>
+<view class="shopspingjia {{currentTab==1 ? 'action' : ''}} " >
+  <view class='shopspingjia_item' wx:for="{{pinglun}}" wx:key="item">
+    <view class='shopspingjia_item_top'>
+      <view class='shopspingjia_item_top_pic'><image src='{{item.photo}}'></image></view>
+      <view class='shopspingjia_item_top_user'>
+        <view class='shopspingjia_item_top_user_name'>{{item.uname}}</view>
+      </view>
+      <view class='shopspingjia_item_top_date'>{{item.addtime}}</view>
+    </view>
+    <view class='pingjiacontent'>{{item.concent}}</view>
+    <view wx:if="{{item.xs=='1'}}" class="pingjiacontent" style=''>商家回复：
+      <view class='pingjiacontent'>{{item.reply_content}}</view>
+    </view>
+   
+  </view>
+
+</view>
+
+<view class='shoucangjiagou'>
+  <view class='goindex' bindtap="home">
+    <view class='goindex_pic'><image src='../../images/hhome.png'></image></view>
+    <view class='goindex_txt'>首页</view>
+  </view>
+  <view class='goindex' bindtap="addFavorites">
+    <view class='goindex_pic'><image src="{{shoucang==0?'../../images/sshoucang.png':'../../images/shoucang1.png'}}"></image></view>
+    <view class='goindex_txt'>收藏</view>
+  </view>
+
+  <view wx:if="{{itemData.is_hy=='0'}}" class='jiagou' bindtap='showBuy'>加入购物车</view>
+  <view wx:if="{{itemData.is_hy=='0'}}" class='buy jiagou'  bindtap='showBuy'>立即购买</view>
+
+
+  <view wx:if="{{itemData.is_hy=='1'}}" class='buyhy jiagouhy' bindtap='huiyuan'>立即购买</view>
+  <view wx:if="{{itemData.is_hy=='2'}}" class='buyhy jiagouhy' bindtap='mianfei'>立即购买</view>
+  <view wx:if="{{itemData.is_hy=='3'}}" class='buyhy jiagouhy' bindtap='hongbao'>立即购买</view>
+
+</view>
+<!-- 弹窗 -->
+<view class='xuanze00' style='display:{{xuanze}}'>
+<view class='xuanze00_inner'>
+  <view class='xuanze00_top'>
+    <view class='xuanze00_top_pic'><image src='{{itemData.photo_x}}'></image></view>
+    <view class='xuanze00_top_txt'>
+      <view class='xuanze00_top_txt_one'>
+        <view class='main_content_num_icon'>￥</view>
+        <view class='main_content_num_num'>{{price}}</view>
+      </view>
+      <view class='kucun'>库存 {{num}} 件</view>
+      <view class='kucun'>请选择：{{ggname}} </view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class='scroll_box' style='height:450rpx;'>
+ 
+  <view class='xuanze00_zixiang'>
+    <view class='zixiang_title'>规格</view>
+    <view class='zixiang_item_parent'>
+      <block wx:for="{{guigelist}}"  wx:if="{{guigelist}}">
+        <view class='zixiang_item' bindtap='ggtype' data-ggid='{{item.id}}' data-ggprice='{{item.price}}' data-ggname='{{item.name}}' data-ggnum='{{item.stock}}' style="{{item.id==ggid?'color:#0000e5':''}}" >{{item.name}}</view>
+      </block>
+      <view class='zixiang_item' bindtap='ggtype' data-ggid='1'  data-ggprice='{{itemData.price}}' data-ggname='默认' data-ggnum='{{num}}' style="{{ggid==1?'color:#0000e5':''}}" >默认</view>
+    </view>
+   
+  </view>
+  <view class='buy_num'>
+    <view class='buy_num_left'>购买数量</view>
+    <view class='buy_num_right'>
+      <!-- 减号 -->
+       <text class="buy_num_right1 {{minusStatuses[index]}}" data-alpha-beta="0" bindtap="changeNum">-</text>
+       <!-- 数值 -->
+       <view class="buy_num_right2 nownum">{{buynum}}</view>
+       <!-- 加号 -->
+       <text class="buy_num_right1 normal" data-alpha-beta="1" bindtap="changeNum">+</text>
+
+    </view>
+  </view>
+  <!-- <view style='height:400rpx;'></view> -->
+  </scroll-view>
+  <view class='buy_click'>
+    <view class='jiarugouwuche' bindtap='addShopCart'>加入购物车</view>
+    <view class='lijigoumai' bindtap='newpay' >立即购买</view>
+  </view>
+  </view>
+  <view class='close_buy' bindtap='close_buy'>
+    <image src='../../images/close.png'></image>
+  </view>
+</view>
+<view class='xuanze00' style='padding-top:500rpx;display:{{productCan}}'>
+  <view class='xuanze00_inner'>
+    <view class='xuanzeOne'>基本信息</view>
+    <scroll-view scroll-y="true" class='scroll_box' style='height:625rpx;'>
+      <view class='xuanzeOne xuanzeTwo'><view class='xuanzeThree'>教育机构</view><view class='xuanzeFour'>亲子教育机构</view></view>
+      <view style='height:400rpx;'></view>
+    </scroll-view>
+    <view class='clickSure' bindtap='clickSure'>确定</view>
+  </view>
+</view>
+
+<!-- 生成二维码 -->
+<my-poster id="getPoster" bindmyevent="myEventListener" num="{{itemData.name}}" name="{{itemData.name}}" ></my-poster>
+
+
+<view class='imagePathBox' hidden="{{maskHidden == false}}">
+  <image src="{{imagePath}}" class='shengcheng'></image>
+  <image src='../../images/close.png' class='dele' catchtap='closePoste'></image>
+  <button class='baocun' bindtap='baocun'>保存相册，分享到朋友圈</button>
+</view>
+<view hidden="{{maskHidden == false}}" class="mask"></view>
+<view class="canvas-box">
+  <canvas style="width: 375px;height: 667px;position:fixed;" canvas-id="mycanvas" />
+</view>

@@ -1,0 +1,24 @@
+/* pages/login/index.wxss */
+.one {
+    margin: auto;
+
+}
+
+page {
+    text-align: center;
+    background-color: #fff;
+}
+
+.one image {
+    width: 200rpx;
+    height: 200rpx;
+    margin: 0 auto;
+}
+
+image {
+    margin: 0 auto;
+}
+
+.white {
+    color: #fff;
+}

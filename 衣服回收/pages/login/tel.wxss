@@ -1,0 +1,103 @@
+/* pages/sign/sign.wxss */
+page{
+  width: 100%;
+  height: 100%;
+
+}
+.parent{
+  width: 100%;
+  height: 1330rpx;
+  overflow: hidden;
+  position: relative;
+}
+.login_bg{
+  width: 100%;
+  height: 1338rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.login_bg image{
+  width: 100%;
+  height: 100%;
+}
+form{
+  width: 750rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.form{
+  width: 612rpx;
+  height: 565rpx;
+  margin: 0 auto;
+  padding-top: 435rpx;
+}
+.form input{
+  font-size: 26rpx;
+  color: #808080;
+  width: 493rpx;
+}
+.form_input image{
+  width: 35rpx;
+  height: 41rpx;
+  position: absolute;
+  top: 19rpx;
+  left: 35rpx;
+}
+.form_input{
+  height: 74rpx;
+  width: 100%;
+  position: relative;
+  background: #f4f4f4;
+  margin-bottom: 50rpx;
+  padding-left: 88rpx;
+  box-sizing: border-box;
+  border-radius: 42rpx;
+  padding-top: 10rpx;
+}
+button{
+  font-size: 40rpx;
+  width:350rpx;
+  height: 92rpx;
+  border-radius: 40rpx;
+  background: linear-gradient(to right,#1ba2fb,#0966fd);
+  color: white;
+}
+.sign_in{
+  font-size: 25rpx;
+  color: #1594fb;
+  text-align: right;
+  margin-top: 28rpx;
+}
+.no_input{
+  background: none;
+  overflow: hidden;
+  font-size: 25rpx;
+  color: #1594fb;
+  padding:0 20rpx;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.check{
+  float: left;
+}
+.check checkbox{
+  width: 215rpx;
+  height: 33rpx;
+}
+.wangji{
+  float: right;
+}
+.wechat_icon{
+  width: 83rpx;
+  height: 83rpx;
+  margin: 60rpx auto 0;
+}
+.wechat_icon image{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,8 @@
+<view class='search_no' style='margin-top:100rpx;'>
+   <image src='/images/wx.png' style='width:180rpx;height:180rpx;'></image>
+   <view class='font_16 c9' style='margin-top:20rpx;'>允许微信授权体验更多功能</view>
+</view>
+<view  style='width:320rpx;margin:0 auto; margin-top:150rpx;'>
+<!-- <button  open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" style='background:#1cb924;' class='white'>点击授权</button> -->
+<button bindtap="getUserProfiles" style='background:#1cb924;' class='white'>点击授权</button>
+</view>

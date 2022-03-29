@@ -1,0 +1,7 @@
+<view class='search_no' style='margin-top:100rpx;'>
+   <image src='{{url}}/tel.png' style='width:180rpx;height:180rpx;'></image>
+   <view class='font_16 c9' style='margin-top:20rpx;'>允许微信授权体验更多功能</view>
+</view>
+<view  style='width:320rpx;margin:0 auto; margin-top:150rpx;'>
+<button  open-type="getPhoneNumber" bindgetphonenumber ="getPhoneNumber" style='background:#0b4ad8;' class='white'>点击授权手机号</button>
+</view>

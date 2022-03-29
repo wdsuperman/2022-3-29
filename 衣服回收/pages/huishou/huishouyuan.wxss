@@ -1,0 +1,41 @@
+/* pages/my/huishouyuan.wxss */
+.icon{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+    flex-shrink: 0;
+}
+.inp{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin:50rpx auto ;
+}
+input{
+    padding-left: 10rpx;
+    font-size: 28rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+    width: 100%;
+}
+button{
+    position: fixed;
+    bottom: 100rpx;
+    width: 90%;
+    left: 5%;
+    background-color: rgb(242, 242, 242);
+    color: #999;
+}
+.submit{
+    bottom: 230rpx;
+}
+button::after{
+    border: 0;
+}
+form{
+    display: block;
+    padding-top: 100rpx;
+}
+.banner{
+    width: 100%;
+}

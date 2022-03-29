@@ -1,0 +1,83 @@
+/* pages/my/huishoudizhi.wxss */
+button{
+    color: #fff;
+    background-color: #55d781;
+    font-size: 30rpx;
+    width: 90%;
+    border-radius: 10rpx;
+    position: fixed;
+    bottom: 100rpx;
+    margin-left: 5%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button::after{
+    border: 0;
+}
+
+.inp{
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #eee;
+    color: #333;
+}
+
+.inpText{
+    width: 30%;
+    line-height: 80rpx;
+    flex-shrink: 0;
+    font-size: 26rpx;
+    color: #656565;
+}
+input{
+    line-height: 80rpx;
+    height: 80rpx;
+    width: 100%;
+    color: #000;
+
+}
+.top{
+    color: #808080;
+    width: 100%;
+}
+.wrap{
+    background-color: #fff;
+    border-bottom: 2rpx solid #eee;
+}
+.dz{
+    justify-content: space-between;
+    border: 0;
+}
+.place-holder{
+    color: #bbbbbb;
+    font-size: 24rpx;
+}
+
+/* 按钮 */
+.wx-switch-input::before {
+    width: 80rpx !important;
+    height: 50rpx !important;
+    background: #b6c3d3 !important;
+    border: #b6c3d3 !important;
+}
+.wx-switch-input {
+    width: 80rpx !important;
+    height: 50rpx !important;
+    background: #55d781 !important;
+    border: #55d781 !important;
+    box-sizing: border-box;
+}
+.wx-switch-input::after {
+    width: 50rpx !important;
+    height: 50rpx !important;
+} 
+
+.sfz{
+    width: 150rpx;
+    height: 150rpx;
+}

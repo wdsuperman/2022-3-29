@@ -1,0 +1,49 @@
+<!--pages/dingdan/detail.wxml-->
+<view class="time">期望上门时间</view>
+<view class="time1"><text class="t1">{{info.date}}</text></view>
+<view class="info">
+	<view>
+		<view class="dingdan">订单号:{{info.order_num}}</view>
+    <view>下单时间:{{info.addtime}}</view>
+		<view>废品类型:{{info.lx}}</view>
+		<view>预计重量:{{info.assess}}</view>
+	</view>
+	<view class="type">
+		{{info.desc}}
+	</view>
+</view>
+<view class="line"></view>
+<view class="userInfo">
+	<view class="dz">地址信息</view>
+	<view class="name">{{info.name}}: {{info.tel}} <view class="tel" bindtap="tel">
+			<image src="/images/tel.png"></image>一键呼出
+		</view>
+	</view>
+	<view>{{info.address}}</view>
+	<view class="name">详细地址：{{info.full_address}}<view class="tel" bindtap="daohang">
+			<image src="/images/myDizhi.png"></image>到这儿去
+		</view>
+	</view>
+</view>
+<!-- 未接单 -->
+<view class="btn" wx:if="{{info.status==0}}">
+	<button bindtap="quxiao">接受订单</button>
+</view>
+<!-- 已接单 -->
+<view class="btn" wx:if="{{info.status==1}}">
+	<button bindtap="over">完成订单</button>
+</view> 
+
+<!-- 只有已完成展示 -->
+<view class="userInfo pj" wx:if="{{info.status==2}}">
+	<view class="dz">评价</view>
+    <!-- 有评价 展示 -->
+  <block wx:if="{{pj.id}}">
+    <view class="img" >
+      <image wx:for='{{pj.star}}' bindtap="star" data-index="{{index}}" src="/images/{{item=='true' ?'star1.png':'star.png'}}"></image>
+    </view>
+    <view class="pjy">评价语：{{pj.text}}</view>
+  </block>   
+    <!-- 没评价 展示 -->
+    <view wx:if="{{pj==null}}" >暂无评价~</view>
+</view>

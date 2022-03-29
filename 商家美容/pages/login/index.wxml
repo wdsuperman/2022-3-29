@@ -1,0 +1,16 @@
+<!--pages/login/index.wxml-->
+<image src="/images/loginTop.png" class="topImg"></image>
+<form catchsubmit="formSubmit">
+    <view class="inp">
+        <image src="/images/userIcon.png"></image>
+        <input type="text" placeholder="请输入商家账户" name="name" id="" />
+    </view>
+    <view class="inp">
+        <image src="/images/passwordIcon.png"></image>
+        <input type="password" placeholder="请输入密码" name="pwd" id="" />
+    </view>
+    <button class="login" form-type="submit">立即登陆</button>
+    <view class="zc">
+        <text>还没有账号？</text><button open-type="contact">马上联系平台客服</button>
+    </view>
+</form>

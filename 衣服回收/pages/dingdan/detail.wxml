@@ -1,0 +1,58 @@
+<!--pages/dingdan/detail.wxml-->
+<view class="back">
+  <view class="df status">
+    <view class="tc">
+	  <image src="/images/{{info.status>=10?'order_1':'order_2'}}.png"></image>
+	  <view>已下单</view>
+	</view>
+	<view class="blline"></view>
+	<view class="tc">
+	  <image src="/images/{{info.status>=20?'order_1':'order_2'}}.png"></image>
+	  <view>已接单</view>
+	</view>
+	<view class="blline"></view>
+	<view class="tc">
+	  <image src="/images/{{info.status>=40?'order_1':'order_2'}}.png"></image>
+	  <view>已完成</view>
+	</view>
+  </view>
+</view>
+<view>
+</view>
+<view class="content">
+    <view class="info">
+		<view class="w80">
+			<view class="dingdan">订单号:{{info.order_sn}}</view>
+			<view class="color91">上门时间:{{info.times}}</view>
+			<view class="color91">下单时间:{{info.addtime}}</view>
+			<view class="color91">废品类型:{{info.brand_name}}</view>
+			<view class="color91">预计重量:{{info.weight}}</view>
+			<view class="color91 fonr">详细地址：{{info.address_xq}}</view>
+		<!-- <view bindtap="phone" wx:if="{{info.phone}}">回收员电话:{{info.phone}}</view> -->
+		</view>
+		<view class="type w20">
+			{{info.desc}}
+		</view>
+		<view  style="" wx:if="{{info.phone}}">
+		<image bindtap="phone" src="../../images/tel.png" style="width:60rpx;height:60rpx;"></image>
+		</view>
+	</view>
+</view>
+<!-- 未接单 -->
+<view class="btn" wx:if="{{info.status==10}}">
+	<button class="btn1" bindtap="quxiao">取消订单</button>
+	<button open-type="share">分享订单</button>
+</view>
+<!-- 已接单 -->
+<view class="btn"  wx:if="{{info.status==20}}">
+	<button open-type="share">分享订单</button>
+</view>
+<!-- 已完成 -->
+<view class="btn"  wx:if="{{info.status==40}}">
+	<button class="btn1" bindtap="pingjia">评价</button>
+	<button open-type="share">分享订单</button>
+</view>
+<!-- 已取消 -->
+<view class="btn"  wx:if="{{info.status==1}}">
+	<button class="btn1" bindtap="agin">重新下单</button>
+</view>

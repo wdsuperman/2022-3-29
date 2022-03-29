@@ -1,0 +1,52 @@
+<!--pages/index/yuyue.wxml-->
+<view class="top">
+	<image class="logo" src="/images/logo.png"></image>
+	<view class="topTexe">今日价格：<text class="gj">0.5-1元/公斤</text> </view>
+</view>
+<picker range="{{arr}}" value="{{index}}" bindchange='changeWupin'>
+	<view class="jg">
+		<view>{{wupin[index].cname}}</view>
+		<view class="zhongliang">
+			{{wupin[index].price}}元<text class="danwei">/{{wupin[index].danwei}}</text>
+			<image class="arrow" src="/images/arrow.png"></image>
+		</view>
+	</view>
+</picker>
+
+<!-- <block wx:for="{{cate}}" wx:key="{{key}}" >
+  <view class="jg">
+    <view>{{item.cname}}</view>
+    <view class="zhongliang">{{item.price}}元<text class="danwei">{{item.danwei}}</text> </view>
+  </view>
+ </block> -->
+<view class="picker" bindtap="dizhi">
+	<view>回收地址</view>
+	<view class="yyzl">{{hs_address}} <image class="arrow" src="/images/arrow.png"></image></view>
+</view>
+<!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+	<view class="picker">
+		<text>可预约重量</text>
+		<text class="yyzl">{{array[index]}}</text>
+	</view>
+</picker> -->
+<view class="kgLists">
+	<view bindtap="changeKg" data-title="{{item.title}}" class="kgList {{item.status ? 'activekgList' : ''}}" wx:for='{{array}}' wx:key='key'>
+		{{item.title}}
+	</view>
+</view>
+<view class="picker">
+	<view>预约时间</view>
+	<view class="df">
+		<view class="xz {{pickerStatus ? '' : 'active'}}" bindtap="changePicker">尽快上门</view>
+		<picker class="xz {{pickerStatus ? 'active' : ''}}" mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+			<view wx:if='{{pickerStatus}}'>
+				{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+			</view>
+			<view wx:else class="xz">
+				选择预约时间
+			</view>
+		</picker>
+	</view>
+</view>
+
+<button bindtap="submit"><image class="yueyIcon" src="/images/yuyue.png"></image>一 键 预 约</button>

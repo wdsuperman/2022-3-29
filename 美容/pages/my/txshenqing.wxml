@@ -1,0 +1,20 @@
+<!--pages/shenqingfenxiao/shenqingfenxiao.wxml-->
+<!-- 分销申请页面 -->
+<!-- head -->
+<view class='head'>
+  <image src='https://dome.rs1818.cn/Data/images/shenqingfenxiao_bg.png'></image>
+</view>
+<!-- main -->
+<view class='main'>
+<view class='main_inner'>
+  <view class='main_one'>没有打款路径，想给您打款<view class='main_one_orange'>无能为力啊</view>,请填写申请信息</view>
+  <form  bindsubmit="formSubmit">
+    <input type='text' name='yhname' placeholder='*请填写银行卡预留姓名'></input>
+    <input type='number' name='yhtel' placeholder='*请填写银行卡预留手机号'></input>
+    <input type='number' name='yinhangka' placeholder='*请填写银行卡账号'></input>
+    <input type='text' name='bank' placeholder='*请填写银行名称'></input>
+    <input type='text' name='zhihang' placeholder='*请填写开户行名称'></input>
+    <button formType="submit">提交</button>
+  </form>
+</view>
+</view>

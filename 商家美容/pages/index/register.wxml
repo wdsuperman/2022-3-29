@@ -1,0 +1,42 @@
+<!--pages/index/register.wxml-->
+<view class="top">
+    <view class="btn" bindtap="dj">
+        +登记商品
+    </view>
+</view>
+<view class="box">
+    <view>
+        <view class="title"><text>全部</text>共{{prolist_num}}个宝贝</view>
+        <view class="imgbox">
+            <image wx:for="{{prolist}}" wx:key='key' src="{{item.photo_x}}"></image>
+        </view>
+    </view>
+    <image class="icon" src="/images/gl.png" bindtap="jump" data-type="0"></image>
+</view>
+<view class="box">
+    <view>
+        <view class="title"><text>在售</text>共{{prozs_num}}个宝贝</view>
+        <view class="imgbox">
+            <image wx:for="{{prozs}}" wx:key='key' src="{{item.photo_x}}"></image>
+        </view>
+    </view>
+    <image class="icon" src="/images/gl.png" bindtap="jump" data-type="1"></image>
+</view>
+<view class="box">
+    <view>
+        <view class="title"><text>已售出</text>共{{progsc_num}}个宝贝</view>
+        <view class="imgbox">
+            <image wx:for="{{progsc}}" wx:key='key' src="{{item.photo_x}}"></image>
+        </view>
+    </view>
+    <image class="icon" src="/images/gl.png" bindtap="jump" data-type="2"></image>
+</view>
+<view class="box">
+    <view>
+        <view class="title"><text>已下架</text>共{{proxj_num}}个宝贝</view>
+        <view class="imgbox">
+            <image wx:for="{{proxj}}" wx:key='key' src="{{item.photo_x}}"></image>
+        </view>
+    </view>
+    <image class="icon" src="/images/gl.png" bindtap="jump" data-type="3"></image>
+</view>

@@ -1,0 +1,58 @@
+<image class="banner">
+</image>
+<view class="tz">
+  <view class="tzgg">
+    <image src="/images/tzgg.jpg"></image>
+    <text>{{date}}</text>
+  </view>
+  <view class="tzList">
+    <!-- <view>
+      . 金币打卡140每次 推荐一人得14
+    </view> -->
+    <view>
+      . 平台出售商品将扣除20%佣金，敬请知悉。
+    </view>
+  </view>
+</view>
+<view class="box">
+  <view class="box1" data-type="register" bindtap="jump">
+    <image src="/images/goods.png"></image>
+    <view>商品管理</view>
+  </view>
+  <view class="box2" data-type="grouping" bindtap="jump">
+    <image src="/images/fz.png" ></image>
+    <view>分组管理</view>
+  </view>
+  <view class="box3" data-type="manage" bindtap="jump">
+    <image src="/images/sc.png"></image>
+    <view>订单查询</view>
+  </view>
+  <view class="box4" data-type="return" bindtap="jump">
+    <image src="/images/th.png"></image>
+    <view>退货管理</view>
+  </view>
+  <view class="box3">
+    <image src="/images/ry.png" data-type="staff" bindtap="jump"></image>
+    <view>员工管理</view>
+  </view>
+  <view class="box4">
+    <image src="/images/rz.png"></image>
+    <view>V认证</view>
+  </view>
+</view>
+
+<view class="tabbar">
+  <button>
+    <image src="/images/index.png"></image>
+    <view>我的首页</view>
+  </button>
+  <button class="code" bindtap="code">
+    <image src="/images/code.png"></image>
+    <view>扫描核销</view>
+  </button>
+  <button open-type="contact">
+    <image src="/images/msg.png"></image>
+    <view>消息提醒</view>
+  </button>
+</view>
+<button class="close" bindtap="close">退出登录</button>

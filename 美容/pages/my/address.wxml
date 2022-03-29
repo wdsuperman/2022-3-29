@@ -1,0 +1,23 @@
+<view class="ts" wx:if='{{list.length == 0}}'>
+    暂无收货地址
+</view>
+<view class="lists" wx:if='{{list.length != 0}}'>
+    <view wx:for="{{list}}" wx:key="key">
+        <view class="listTop">
+            <view>
+                <view class="name">{{item.name}} <text>{{item.phone}}</text> </view>
+                <view class="address"><text wx:if="{{item.type}}">默认</text>{{item.address}}</view>
+                <view class="detailed">{{item.detailed}}</view>
+            </view>
+            <image bindtap="bj" class="bj" src="/images/bj.png"></image>
+        </view>
+        <view class="listDown">
+            <view class="click" bindtap="click" data-ind="{{index}}"> <image src="/images/slice{{item.type? '' : '1'}}.png"></image> 默认地址</view>
+            <view bindtap="del" data-ind="{{index}}">删除</view>
+        </view>
+    </view>
+</view>
+<view class="get">
+    <view class="get1">手动添加地址</view>
+    <view class="get2" bindtap="getAddress">一键获取地址</view>
+</view>

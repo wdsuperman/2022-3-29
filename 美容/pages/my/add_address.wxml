@@ -1,0 +1,39 @@
+<!--pages/my/add_address.wxml-->
+    <form bindsubmit="submit">
+<view class="list">
+    <view>
+        <view class="title">省份</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+            <view wx:if="{{region.length != 0}}">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+            <view wx:else>
+                请选择
+            </view>
+        </picker>
+    </view>
+        <view>
+            <view class="title">详细地址</view>
+            <input type="text" name="d" id="" placeholder="门牌号：如1栋2单元303" />
+        </view>
+        <view>
+            <view class="title">联系人</view>
+            <input type="text" name="z" id="" placeholder="请输入联系人" />
+        </view>
+        <view>
+            <view class="title">联系电话</view>
+            <input type="text" name="p" id="" placeholder="请输入联系电话" />
+        </view>
+        <view>
+            <view class="title">验证码</view>
+            <input type="text" name="c" id="" placeholder="输入接到的验证码" />
+        </view>
+        <view>
+            <view class="title">是否默认</view>
+            <switch checked="{{switch1Checked}}" bindchange="switch1Change" name='s' />
+        </view>
+        <button form-type="submit">
+            保存地址
+        </button>
+</view>
+    </form>

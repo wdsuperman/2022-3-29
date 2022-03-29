@@ -1,0 +1,32 @@
+/* pages/my/add_address.wxss */
+.list>view{
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1rpx solid #dcdcdc;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+    font-size: 28rpx;
+}
+.title{
+    width: 180rpx;
+    flex-shrink: 0;
+}
+button{
+    background-color: #fc4645;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 5rpx;
+    text-align: center;
+    font-size: 30rpx;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60rpx;
+}
+input{
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 100%;
+}

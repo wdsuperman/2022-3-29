@@ -1,0 +1,54 @@
+<!--pages/my/index.wxml-->
+<view class="top">
+
+</view>
+<view class="user">
+<!-- <button open-type='chooseAvatar' bind:chooseavatar="onChooseAvatar">11</button> -->
+    <view class="userInfo">
+        <view class='user_photo'>
+            <!-- <open-data type="userAvatarUrl"></open-data> -->
+            <image src="{{url}}" class="avatarUrl"></image>
+        </view>
+        <view class='user_name'>
+            <!-- <open-data type="userNickName" lang="zh_CN"></open-data> -->
+            {{name}}
+        </view>
+        <view class="hodong">
+            <image class="moneyIcon" src="/images/icon.png"></image>
+            <view>
+                <view class="jf">{{res.jifen}}积分</view>
+                <view class="dk">店内活动抵扣金额</view>
+            </view>
+        </view>
+    </view>
+    <view class="id">ID:{{res.id}}</view>
+    
+    <view class="add">
+        <view>
+            <view class="yuee"><image src="/images/01.png"></image>账户余额</view>
+            <view class="jbee">我的余额：{{res.recharge}}</view>
+            <view class="msg">可用于商品支付，现在购买价格更优惠</view>
+            <view class="btn">
+                <view bindtap="yuechongzhi">充值</view>
+                <view bindtap="yuetx">提现</view>
+            </view>
+        </view>
+        <view>
+            <view class="yuee"><image src="/images/02.png"></image>佣金余额</view>
+            <view class="jbee">我的佣金：{{res.yue}}</view>
+            <view class="msg">这是您分享获得的佣金，每次可提现一笔</view>
+            <view class="btn">
+                <view bindtap="ysjb">明细</view>
+                <view bindtap="tx">提现</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="btnList">
+    <button wx:for='{{list}}' wx:key='key' bindtap="jump" data-url="{{item.url}}"  open-type="{{item.url == '' ?  'contact' : ''}}">
+        <image class="icon" src="{{item.icon}}"></image>
+        <view>{{item.title}}</view>
+        <image class="arrow"></image>
+    </button>
+</view>
+<view class="xieyi" bindtap="xieyi">隐私协议</view>

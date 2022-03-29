@@ -1,0 +1,41 @@
+<!--pages/index/clandqx.wxml-->
+<image class="brand" src="/images/cl_1.jpg"/>
+<!-- 边框 -->
+<view class="bk pa_20"> 
+   <view class="title df wid_34">
+    <image src="/images/cl_6.png"/>
+    <view>环保再生加工</view></view>
+    <view class="df img">
+        <image src="/images/cl_2.jpg"/>
+        <image src="/images/cl_3.jpg"/>
+    </view>
+    <view class="text">
+        将可以用于再生的棉毛、棉纶、涤纶类等旧衣物交给再生工厂进行破碎、除拉链纽扣等配饰，清洗烘干后通过物理和化学方法进行开松、分疏等操作，加工成农业保温材料、建筑和工业隔音材料、填充材料、无纺布等，或生成再生纤维、聚酯材料、再生绵帆布重新用于纺织品生产
+    </view>
+</view>
+<view class="bk pa_65"> 
+   <view class="title df wid_26">
+    <image src="/images/cl_6.png"/>
+    <view>转送山区</view></view>
+    <view class="df img">
+        <image src="/images/cl_4.jpg"/>
+        <image src="/images/cl_5.jpg"/>
+    </view>
+    <view class="text">
+        对于符合转送标准的衣物(较新、质量较、好较干净、一般为小孩冬装)将被重新清洗消毒后转送给有需要的贫困山区或者组织以及个
+    </view>
+</view>
+<view class="bk pa_110"> 
+   <view class="title df wid_26">
+    <image src="/images/cl_6.png"/>
+    <view>出口非洲</view></view>
+    <view class="df img">
+        <image src="/images/cl_6.jpg"/>
+        <image src="/images/cl_7.jpg"/>
+    </view>
+    <view class="text">
+        对于较新、质量较好的夏装(出口地区年均温度较高)，经过仔细分类后交给具有合法处理能力的公司出口到非洲东南亚等一些贫困国家或者战乱国家。
+    </view>
+</view>
+
+

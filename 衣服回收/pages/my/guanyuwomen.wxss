@@ -1,0 +1,37 @@
+/* pages/my/guanyuwomen.wxss */
+.logo{
+    width: 155rpx;
+    height: 179rpx;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25rpx;
+}
+.title{
+    font-size: 40rpx;
+    color: #333;
+    /* font-weight: bold; */
+    text-align: center;
+    line-height: 80rpx;
+}
+.msg{
+    font-size: 26rpx;
+    line-height: 50rpx;
+    text-indent: 52rpx;
+    width: 90%;
+    margin: 0 auto;
+    /* color: #999; */
+}
+.bt{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50rpx;
+    color: #353535;
+    font-size: 24rpx;
+
+}
+
+.wrap {
+
+    bottom: 100rpx;
+
+}

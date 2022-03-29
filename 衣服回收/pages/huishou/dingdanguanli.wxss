@@ -1,0 +1,104 @@
+/* pages/dingdan/dingdan.wxss */
+.tab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 15rpx 0;
+    font-size: 30rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tabText{
+    color: #999;
+    line-height: 60rpx;
+    width: 100%;
+    text-align: center;
+}
+.active{
+    color: #1e8f3b;
+    font-weight: bold;
+}
+.lists{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100rpx;
+}
+.list{
+    border-bottom: 1rpx solid #e5e5e5;
+    padding-bottom: 20rpx;
+}
+.listTop{
+    display: flex;
+    justify-content: space-between;
+    line-height: 100rpx;
+    height: 100rpx;
+    align-items: center;
+}
+.topLeft{
+    font-size: 26rpx;
+    color: #b5b5b5;
+    line-height: 30rpx;
+}
+.topRight{
+    font-size: 22rpx;
+    color: #fff;
+    width: 111rpx;
+    height: 39rpx;
+    border-radius: 19rpx;
+    text-align: center;
+    line-height: 39rpx;
+}
+.wjd{
+    background-color: #83ba00;
+}
+.yjd{
+    background-color: #eb6100;
+}
+.ywc{
+    background-color: #e60012;
+}
+.yqx{
+    background-color: #ddd;
+}
+.info{
+    font-size: #313131;
+    font-size: 26rpx;
+    line-height: 40rpx;
+}
+.btnLists{
+    display: flex;
+    flex-direction: row-reverse;
+}
+button{
+    margin: 0;
+    padding: 0;
+    margin-left: 10rpx;
+    font-size: 22rpx;
+    border-radius: 100rpx;
+    width: 125rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+}
+button::after{
+    border: 0;
+}
+.share{
+    color: #83ba00;
+    border: solid 1rpx #ffa217;
+}
+.quxiao{
+    color: #ffa217;
+    border: solid 1rpx #ffa217;
+}
+.contact{
+    border: solid 1rpx #949494;
+    color: #535353;
+}
+.ddl{
+    font-size: 28rpx;
+    color: #999;
+}

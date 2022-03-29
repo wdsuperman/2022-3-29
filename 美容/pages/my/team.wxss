@@ -1,0 +1,65 @@
+/* pages/myteam/myteam.wxss */
+.head{
+  height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  border-bottom: 2rpx solid #d4d4d4;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+}
+.banner{
+  width: 750rpx;
+  height: 100rpx;
+}
+.head view{
+  height: 97rpx;
+  width: 50%;
+  text-align: center;
+  border-bottom: 3rpx solid white;
+  margin: 0 40rpx;
+}
+.head .team{
+  color: #2a77f9;
+  border-bottom: 3rpx solid #2a77f9;
+}
+.main{
+  width: 750rpx;
+
+}
+.main_item{
+  width: 682rpx;
+  height: 180rpx;
+  margin: 35rpx auto 0;
+  display: flex;
+  padding: 32rpx 29rpx 34rpx 38rpx;
+  box-sizing: border-box;
+  box-shadow: 0 0 10rpx 0 #e2e1e2;
+  border-radius: 9rpx;
+}
+.item_pic{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 35rpx;
+}
+.item_pic image{
+  width: 100%;
+  height: 100%;
+}
+.item_name{
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.item_date{
+  font-size:24rpx;
+}
+.dengji{
+  font-size: 24rpx;
+  color: #fa8204;
+  margin-left: 5rpx;
+}

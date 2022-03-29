@@ -1,0 +1,77 @@
+<!--pages/index/release.wxml-->
+<form bindsubmit="submit">
+    <view class="wrap">
+        <view class="inp">
+            <view>商品名称</view>
+            <input value="{{info.name}}" type="text" name="name" id="" placeholder="建议描述产品名称、特点、卖点" />
+        </view>
+        <view class="inp">
+            <view>商品货号</view>
+            <input value="{{info.pro_number}}" type="text" name="pro_number" id="" placeholder="请输入货号" />
+        </view>
+        <view class="inp">
+            <view>商品分类</view>
+            
+            <view class="section">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key='name'>
+                <input wx:if="{{tab == '0'}}" type="text" name="" id="" placeholder="请选择商品分类" disabled/>
+                <input wx:if="{{tab != '0'}}" type="text" name="" id="" value="{{array[index].name}}" placeholder="请选择商品分类" disabled/>
+                </picker>
+            </view>
+        </view>
+        <view class="inp">
+            <view>商品价格</view>
+            <view class="price"><text>￥</text>
+                <input value="{{info.price}}" type="text" name="price" id="" placeholder="请输入商品价格" />
+            </view>
+        </view>
+        <view class="inp">
+            <view>市场价格</view>
+            <view class="price"><text>￥</text>
+                <input value="{{info.yuanjia}}" type="text" name="yuanjia" id="" placeholder="请输入市场价格" />
+            </view>
+        </view>
+        <view class="inp">
+            <view>货品详细描述</view>
+            <textarea value="{{info.content}}" name="content" id="" cols="30" rows="10"
+                placeholder="货品描述请严格遵循《广告法》规定，避免出现虚假宣传和误导消费者词语。"></textarea>
+        </view>
+        <view class="inp">
+            <view>商品主图</view>
+            <wux-upload listType="picture-card" fileList="{{ photo_x }}" controlled='{{controlled}}' max="1"
+                url="https://meifa.rs1818.cn/index.php/api/Adminshop/photo_add" name='files' bind:success='success'
+                bind:change='change' bind:fail='fail' bind:remove='remove'>
+                <text style="font-size: 50rpx;color: #999;">+</text>
+            </wux-upload>
+        </view>
+        <view class="inp">
+            <view>商品轮播图</view>
+            <wux-upload listType="picture-card" fileList="{{ photo_string }}" controlled='{{controlled}}' max='9'
+                url="https://meifa.rs1818.cn/index.php/api/Adminshop/photo_add" name='files' bind:fail='fail'
+                bind:success="onSuccess" bind:change='change1' bind:remove="onRemove">
+                <text style="font-size: 50rpx;color: #999;">+</text>
+            </wux-upload>
+        </view>
+        <view class="inp">
+            <view>商品详情</view>
+            <wux-upload listType="picture-card" controlled='{{controlled}}' fileList="{{ content_photo }}" max="9"
+                url="https://meifa.rs1818.cn/index.php/api/Adminshop/photo_add" name='files' bind:change='change2'
+                bind:success='success1' bind:fail='fail' bind:remove='remove1'>
+                <text style="font-size: 50rpx;color: #999;">+</text>
+            </wux-upload>
+        </view>
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange">
+        <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+            <text>{{item.value}}</text>
+        </radio>
+    </radio-group>
+    <view class="btn">
+        <button class="b1" form-type="submit" data-type="0">
+            立即出售
+        </button>
+        <button class="b2" form-type="submit" data-type="1">
+            放入仓库
+        </button>
+    </view>
+</form>

@@ -1,0 +1,141 @@
+/* pages/dingdan/dingdan.wxss */
+page{
+    background: #f7f7f7;
+}
+.tab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 15rpx ;
+    font-size: 30rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tabText{
+    color: #999;
+    line-height: 60rpx;
+    width: 100%;
+    text-align: center;
+}
+.active{
+    color: #50cb71;
+    font-weight: bold;
+    border-bottom: 6rpx solid #4fc672;
+}
+.zw{
+    height:110rpx ;
+}
+.lists{
+    width: 95%;
+    margin: 0 auto;
+}
+.list{
+    border-radius: 20rpx;
+    background-color: #fff;
+    padding: 3%;
+    box-shadow: 0rpx 0rpx 6rpx 10rpx #d3d3d3;
+    margin-top: 30rpx;
+}
+.listTop{
+    display: flex;
+    justify-content: space-between;
+    line-height: 60rpx;
+    height: 60rpx;
+    align-items: center;
+}
+.topLeft{
+    font-size: 26rpx;
+    line-height: 30rpx;
+}
+.topLeft image{
+    width: 38rpx;
+    height: 38rpx;
+    padding-right: 10rpx;
+
+}
+.topRight{
+    font-size: 26rpx;
+    color: #fff;
+    width: 111rpx;
+    height: 39rpx;
+    border-radius: 19rpx;
+    text-align: center;
+    line-height: 39rpx;
+}
+.wjd{
+   color: #83ba00;
+}
+.yjd{
+   color: #eb6100;
+}
+.ywc{
+    color: #e60012;
+}
+.yqx{
+    color: #000;
+}
+.info{
+    font-size: 28rpx;
+    line-height: 40rpx;
+    margin-top: 15rpx;
+}
+.info image{
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 15rpx;
+}
+.time{
+    color: #9f9f9f;
+    font-size: 24rpx;
+   
+}
+.justify-content{
+    justify-content:flex-start
+}
+.btnLists{
+    display: flex;
+    flex-direction: row-reverse;
+}
+button{
+    margin: 0;
+    padding: 0;
+    margin-left: 10rpx;
+    font-size: 22rpx;
+    border-radius: 100rpx;
+    width: 125rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+}
+button::after{
+    border: 0;
+}
+.share{
+    color: #83ba00;
+    border: solid 1rpx #ffa217;
+}
+.quxiao{
+    color: #ffa217;
+    border: solid 1rpx #ffa217;
+}
+.contact{
+    border: solid 1rpx #949494;
+    color: #535353;
+}
+
+.xd{
+    width: 90%;
+    margin: 0 auto;
+    height: 80rpx;
+    background-color: #55d781;
+    color: white;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 10rpx;
+
+    margin-top: 100rpx;
+}

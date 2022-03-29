@@ -1,0 +1,28 @@
+<!--pages/index/release.wxml-->
+<form bindsubmit="submit">
+    <view class="wrap">
+        <view class="inp">
+            <view>员工编号</view>
+            <input type="text" name="number" id="" placeholder="请输入员工编号" value="{{number}}" />
+        </view>
+        <view class="inp">
+            <view>姓名</view>
+            <input type="text" name="name" id="" placeholder="请输入员工姓名" value="{{name}}" />
+        </view>
+        <view class="inp">
+            <view>擅长</view>
+            <input type="text" name="intro" id="" placeholder="请输入擅长工作" value="{{intro}}" />
+        </view>
+        <view class="inp">
+            <view>员工形象照</view>
+            <wux-upload listType="picture-card" fileList="{{ photo_x }}" controlled max="1" url="https://meifa.rs1818.cn/index.php/api/Adminshop/photo_add" name='files' bind:success='success' bind:change='change' bind:fail='fail' bind:remove='remove'>
+                <text style="font-size: 50rpx;color: #999;">+</text>
+            </wux-upload>
+        </view>
+    </view>
+    <view class="btn">
+        <button class="b1" form-type="submit"data-type="0">
+            确定
+        </button>
+    </view>
+</form>

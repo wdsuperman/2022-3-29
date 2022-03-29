@@ -1,0 +1,12 @@
+<!--pages/index/register.wxml-->
+<view class="top">
+</view>
+<view class="box" wx:for="{{list}}" wx:key='key'>
+    <view >
+        <view class="title"><text>{{item.name}}</text>共{{item.pro_num}}个宝贝</view>
+        <view class="imgbox">
+            <image wx:for="{{item.pro}}" src="{{i.photo_x}}" wx:for-item='i'></image>
+        </view>
+    </view>
+    <image class="icon" src="/images/gl.png" bindtap="goods" data-title="{{item.name}}" data-id="{{item.id}}"></image>
+</view>

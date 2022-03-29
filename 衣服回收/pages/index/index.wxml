@@ -1,0 +1,127 @@
+<view class="top">
+
+</view>
+<view class="gonggao">
+  <image src="/images/gonggao.png"></image>
+  <view>
+    陈** 177*****0111 预约回收
+  </view>
+</view>
+<swiper autoplay='true' indicator-dots='true' indicator-active-color='#659489' indicator-color='rgba(0, 0, 0, .1)'
+  bindtap="banner">
+  <block wx:for="{{lunbo}}" wx:item="{{key}}">
+    <swiper-item>
+      <image class="banner" src="{{item.photo}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 分类s -->
+<view class="fl df tc">
+  <view class=" cyfw_list " wx:for='{{fwList}}' open-type='{{item.type}}' bindtap='iconClick' data-name='{{item.name}}'
+    data-type='{{item.type}}'>
+    <image src='{{item.img}}'></image>
+    <view>{{item.title}}</view>
+  </view>
+  <view class="w100 df  flex-end">
+    <view class="cyfw_list " bindtap='iconClick' data-name='./xiadan' data-type='1'>
+      <image src='/images/index_7.png'></image>
+      <view>下单</view>
+    </view>
+
+    <image class=" logo" src='/images/index_1.png'></image>
+
+    <view class="cyfw_list " bindtap='iconClick' data-name='../my/guanyuwomen' data-type=''>
+      <image src='/images/index_8.png'></image>
+      <view>关于我们</view>
+    </view>
+  </view>
+</view>
+
+<view class="clandqx p_all">
+  <view class="df p_all line">
+    <view class="w80 title">回收指南</view>
+  </view>
+  <view class="">
+    <view class="img">
+      <view>
+        <image src="/images/yy.png"></image>
+        <view>在线预约</view>
+      </view>
+      <image class="dian" src="/images/dian.png"></image>
+      <view>
+        <image src="/images/sm.png"></image>
+        <view>免费上门</view>
+      </view>
+      <image class="dian" src="/images/dian.png"></image>
+      <view>
+        <image src="/images/wc.png"></image>
+        <view>完成订单</view>
+      </view>
+      <image class="dian" src="/images/dian.png"></image>
+      <view>
+        <image src="/images/sy.png"></image>
+        <view>获取收益</view>
+      </view>
+    </view>
+    <image bindtap="hs" class="btn" src="/images/btn.png"></image>
+  </view>
+</view>
+<view class="clandqx p_all">
+  <view class="df p_all line">
+    <view class="w80 title">我们承诺</view>
+  </view>
+  <view class="dftext p_all cn">
+    <view>
+      <view>
+        <view class="t1">及时上门</view>
+        <view>10分钟内完成响应</view>
+        <view>1天内完成</view>
+      </view>
+      <image src="/images/i3.png"></image>
+    </view>
+    <view>
+      <view>
+        <view class="t1">即时到账</view>
+        <view>收益秒结</view>
+        <view>提现秒到</view>
+      </view>
+      <image src="/images/i2.png"></image>
+    </view>
+    <view>
+      <view>
+        <view class="t1">价格公道</view>
+        <view>良心定价</view>
+        <view>收益保障</view>
+      </view>
+      <image src="/images/i4.png"></image>
+    </view>
+    <view>
+      <view>
+        <view class="t1">称重准确</view>
+        <view>杜绝吃秤</view>
+        <view>误差即赔</view>
+      </view>
+      <image src="/images/i1.png"></image>
+    </view>
+  </view>
+</view>
+<!-- 分类f -->
+<!-- 处理与去向s -->
+<view class="clandqx p_all">
+  <view class="df p_all line">
+    <view class="w80 title">我们承诺</view>
+    <view class="w20 sTitle" bindtap="iconClick" data-name='./clandqx' data-type=''>查看更多</view>
+  </view>
+  <view class="dftext p_all">
+    <image src="/images/index_2.jpg" class="w40 " />
+    <view class="w60 p_l10">
+      <view class="t1">环保再生</view>
+      <view class="t2">环保再生企业再生加工成原材料</view>
+      <view class="t1">公益捐赠</view>
+      <view class="t2">捐赠给贫困山区的孩子们</view>
+      <view class="t1">出口非洲</view>
+      <view class="t2">出口到非洲等第三方国家</view>
+    </view>
+  </view>
+</view>
+<!-- 处理与去向f -->

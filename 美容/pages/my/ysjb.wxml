@@ -1,0 +1,41 @@
+<!-- <view class="top">
+    <view class="title">
+    可提现佣金（元）
+</view>
+<view class="num">100.10</view>
+</view>
+<view class="mid">
+    <view>订单明细</view>
+    <view>即将到账：<text>100.1</text></view>
+</view>
+<view class="list">
+    <view wx:for="{{list}}" wx:key='key'>
+        <view>
+            <view>{{item.title}}</view>
+            <view class="time">{{item.time}}</view>
+        </view>
+        <view>{{item.amount}}  <image></image> </view>
+    </view>
+</view> -->
+<!--pages/yongjinmingxi/yongjinmingxi.wxml-->
+<!-- 佣金详情页面 -->
+<!-- head -->
+<view class='main'>
+  <view class='allmoney'>
+    <view class='allmoney_text'>可提现佣金（元）</view>
+    <view class='allmoney_num'>{{user.yue}}</view>
+  </view>
+  <view class='mingxi'><view class='mingxi_text'>订单明细</view><view class='mingxi_right'>金额（元）</view></view>
+  <scroll-view scroll-y="true" class='scroll_box' style='height:{{windowHeight-100}}px;background:#ffffff;' bindscrolltolower="bindDownLoad">
+    <view class='money_item' wx:for='{{user_fx}}'>
+      <view class='money_item_left'>
+        <view>{{item.content}}</view>
+        <view class='money_left_date'>{{item.addtime}}</view>
+      </view>
+      <view class='money_item_right'>
+        <view>{{item.price}}</view>
+        <!-- <view class='money_right_right'> > </view> -->
+      </view>
+    </view>
+  </scroll-view>
+</view>

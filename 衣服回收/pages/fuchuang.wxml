@@ -1,0 +1,6 @@
+<!--pages/fuchuang.wxml-->
+<view class="wrap" style="bottom:{{fromFather}}">
+	<button style="" open-type="contact">
+		<image src="/images/kefu.png"></image>
+	</button>
+</view>

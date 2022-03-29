@@ -1,0 +1,41 @@
+<!--pages/dingdan/dingdan.wxml-->
+
+	<view class="tab" >
+		<view wx:for='{{tab}}' bindtap="clickTab" wx:key='key' data-type="{{item.type}}" class="tabText {{item.status ? 'active' : ''}}">
+			{{item.title}}
+		</view>
+	</view>
+	<view class="zw"></view>
+	<view class="lists" wx:if='{{list.length}}'>
+		<view wx:for='{{list}}' wx:key='key' class="list" bindtap="detail" data-oid="{{item.id}}">
+			<view class="listTop">
+				<view class="topLeft df">
+					<image src="/images/my_1.png" />
+					<view>松鼠回收</view>
+				</view>
+				<view class="topRight {{item.desc =='未接单' ? 'wjd' : item.desc =='已接单' ? 'yjd' : item.desc =='已完成' ? 'ywc' :item.desc =='已取消' ? 'yqx':''}}">{{item.desc}}</view>
+			</view>
+			<view class="info df  justify-content">
+				<image src="{{item.br_photo}}"/>
+				<view>
+				 <view> {{item.weight}}</view>
+				 <view class="time">{{item.addtime}}</view>
+				</view>
+			</view>
+			<view class="btnLists">
+				<!-- <button wx:if='{{item.desc == "未接单"}}' class="quxiao" catchtap="quxiao" data-oid="{{item.id}}" data-index="{{index}}">取消订单</button> -->
+				<button class="contact" open-type="contact" catchtap="contact">联系客服</button>
+				<button wx:if='{{item.desc == "已完成"}}' class="share" open-type="share" catchtap="share">分享</button>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view  wx:else>
+		<image style="width:162px;height:167px;display:block;margin:40% auto auto auto;" src="/images/dz_1.jpg"></image>
+		<view style="color:#999;font-size:26rpx;margin-top:20rpx;text-align:center;">您还没有历史订单，点击下单~</view>
+		<view style="color:#999;font-size:26rpx;margin-top:20rpx;text-align:center;">完成您第一次环保回收吧~</view>
+		<view class="xd" wx:if="{{isStatus==0}}">立即下单</view>
+	</view>
+

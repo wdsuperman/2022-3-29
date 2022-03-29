@@ -1,0 +1,154 @@
+/* pages/tixian/tixian.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  padding-top: 30rpx;
+  background: #f6f5f5;
+  height: 100%;
+}
+.bank{
+  width: 750rpx;
+  box-sizing: border-box;
+  height: 118rpx;
+  border-bottom: 1rpx solid #dddddd;
+  border-top: 1rpx solid #dddddd;
+  background: white;
+  padding: 19rpx 30rpx 0 31rpx;
+  overflow: hidden;
+}
+.bank image{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  margin-right: 30rpx;
+}
+.bank_content{
+  float: left;
+  font-size: 32rpx;
+}
+.bank_right{
+  float: right;
+  color: #bfbfc1;
+  font-size: 26rpx;
+  line-height: 80rpx;
+}
+.bank_bottom{
+  font-size: 28rpx;
+  color: #5a5a5a;
+  margin-top: 5rpx;
+}
+.form{
+  margin-top: 40rpx;
+  height: 448rpx;
+  width: 750rpx;
+  
+}
+.form_top{
+  height: 287rpx;
+  background: white;
+  border-bottom: 1rpx solid #dddddd;
+  border-top: 1rpx solid #dddddd;
+}
+.form_title{
+  width: 690rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  font-size: 27rpx;
+  color: #676767;
+  line-height: 100rpx;
+}
+.form_num{
+  width: 690rpx;
+  height: 110rpx;
+  padding-top: 16rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 50rpx;
+  display: flex;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+.form_num input{
+  padding-left: 10rpx;
+}
+.form_input{
+  padding-top: 7rpx;
+}
+.form_keyong{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 26rpx;
+  color: #8e8e8e;
+}
+.btn{
+  width: 690rpx;
+  height: 84rpx;
+  background: #48a0e0;
+  color: white;
+  font-size: 37rpx;
+  line-height: 84rpx;
+  margin-top: 74rpx;
+}
+
+/* 弹窗 */
+
+.more_more{
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background:rgba(79,79,79,0.8);
+}
+.more_more image{
+  width: 780rpx;
+  height: 1109rpx;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  
+}
+.more_text{
+  z-index: 4;
+  width: 440rpx;
+  height: 400rpx;
+  position: absolute;
+  top: 30%;
+  left: 22%;
+ /* margin: -300rpx 0 0 -220rpx;
+  padding-top: 90rpx;*/
+}
+
+.more_text .tips{
+  font-size: 21rpx;
+  color: #fdb23c;
+}
+ .close_tips{
+  width: 62rpx;
+  height: 69rpx;
+  position: absolute;
+  top:18%;
+  right:5%;
+}
+.hidden{
+  display: none;
+}
+.flex_Center {
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+.bntmma{
+  width: 390rpx;
+  height: 84rpx;
+  background: #48a0e0;
+  color: white;
+  font-size: 37rpx;
+  line-height: 84rpx;
+  margin-top: 74rpx;
+}

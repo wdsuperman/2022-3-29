@@ -1,0 +1,57 @@
+/* pages/dingdan/pingjia.wxss */
+.bianhao{
+    color: #b5b5b5;
+    font-size: 30rpx;
+
+}
+.top{
+    font-size: 26rpx;
+    line-height: 50rpx;
+    width: 90%;
+    margin: 0 auto;
+}
+textarea{
+    width: 669rpx;
+	height: 346rpx;
+	background-color: #f6f6f6;
+    border-radius: 20rpx;
+    font-size: 26rpx;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 30rpx;
+}
+.line{
+    
+    width: 90%;
+    margin: 0 auto;
+    height: 2rpx;
+    margin-top: 30rpx;
+    background-color: #e5e5e5;
+}
+image{
+    width: 52rpx;
+    height: 52rpx;
+}
+.img{
+    width: 400rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50rpx auto;
+}
+button::after{
+    border: 0;
+}
+button{
+    position: fixed;
+    bottom: 50rpx;
+    height: 88rpx;
+    background-color: #48b144;
+    width: 90%;
+    left: 5%;
+    border-radius: 100rpx;
+    color: #fff;
+    letter-spacing: 3rpx;
+    line-height: 88rpx;
+    font-size: 30rpx;
+}

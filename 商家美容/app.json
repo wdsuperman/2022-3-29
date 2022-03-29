@@ -1,0 +1,23 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index/goods",
+        "pages/login/index",
+        "pages/index/goods1",
+        "pages/index/add_staff",
+        "pages/index/staff",
+        "pages/index/return",
+        "pages/index/release",
+        "pages/index/register",
+        "pages/index/grouping",
+        "pages/index/manage"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

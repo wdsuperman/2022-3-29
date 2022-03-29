@@ -1,0 +1,45 @@
+/* pages/index/register.wxss */
+.btn{
+    color: #29a072;
+    font-size: 30rpx;
+    width: 247rpx;
+	height: 69rpx;
+    background-color: #f4f4f4;
+    line-height: 69rpx;
+    margin: 0 auto;
+    text-align: center;
+}
+.top{
+    padding: 50rpx 0;
+    border-bottom: 20rpx solid #f4f4f4;
+}
+.box{
+    padding: 0 34rpx;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40rpx;
+}
+.imgbox{
+    display: flex;
+    margin-top: 30rpx;
+}
+.title{
+    font-size: 29rpx;
+    color: #848484;
+}
+.title text{
+    color: #1f1f1f;
+    font-size: 45rpx;
+    margin-right: 15rpx;
+    font-weight: bold;
+}
+.imgbox image{
+    width: 111rpx;
+    height: 111rpx;
+    border-radius: 10rpx;
+    margin-right: 10rpx;
+}
+.icon{
+    width: 40rpx;
+    height: 30rpx;
+}

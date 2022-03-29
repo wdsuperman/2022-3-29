@@ -1,0 +1,157 @@
+/* pages/my/index.wxss */
+.button-hover{
+    background-color: #fff;
+}
+button::after{
+    border:none;
+    border-bottom: 1rpx solid #e7e7e7;
+    border-radius: 0;
+}
+button{
+    padding: 0 20rpx;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    line-height: 84rpx;
+    background-color: #fff;
+    border: none;
+}
+.avatarUrl{
+    width: 100%;
+    height: 100%;
+}
+.icon{
+    width: 45rpx;
+    height: 45rpx ;
+    margin-right: 20rpx;
+}
+.arrow{
+    height: 20rpx;
+    width: 10rpx;
+    margin-left: auto;
+}
+.top{
+    height: 250rpx;
+    width: 100%;
+    background-image: linear-gradient(#fff, #fe8c81);
+}
+.user{
+    width: 700rpx;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    border: 1rpx solid #f3f3f1;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    top: -110rpx;
+    padding-bottom: 30rpx;
+}
+.user_photo{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    border: 1rpx solid #fc8076;
+    overflow: hidden;
+    position: absolute;
+    top: -75rpx;
+    left: 35rpx;
+}
+.user_name{
+    margin-left: 180rpx;
+    margin-top: 20rpx;
+}
+.userInfo{
+    display: flex;
+    padding-top: 15rpx;
+    box-sizing: border-box;
+}
+.hodong{
+    display: flex;
+    align-items: center;
+    width: 300rpx;
+    height: 78rpx;
+    background-image: linear-gradient(#f1280c, #ff7055);
+    color: #fff;
+    margin-left: auto;
+    border-radius: 78rpx 0 0 78rpx;
+    font-size: 30rpx;
+}
+.moneyIcon{
+    width: 35rpx;
+    height: 35rpx;
+    margin: 0 15rpx;
+}
+.id{
+    margin-left: 40rpx;
+    margin-bottom: 20rpx;
+}
+.jf{
+    font-size: 26rpx;
+}
+.dk{
+    font-size: 24rpx;
+}
+.add{
+    display: flex;
+    width: 660rpx;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+}
+.add>view{
+    width: 320rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid #a4a4a4;
+    padding: 15rpx;
+    box-sizing: border-box;
+}
+.add image{
+    width: 35rpx;
+    height: 35rpx;
+    margin-right: 6rpx;
+}
+.yuee{
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.jbee{
+    font-size: 24rpx;
+    color: #bbb;
+}
+.msg{
+    font-size: 24rpx;
+    line-height: 30rpx;
+    margin-top: 15rpx;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn>view{
+    width: 98rpx;
+    height: 40rpx;
+    color: #fff;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    text-align: center;
+    background-color: #fe8c81;
+    border-radius: 10rpx;
+    margin-top: 50rpx;
+    background-image: linear-gradient(#fd8e7d, #fd7569);
+}
+.btnList{
+    margin-top: -100rpx;
+    border-top: 1rpx solid #e7e7e7;
+}
+.xieyi{
+    width: 120rpx;
+    font-size: 26rpx;
+    border-bottom: 1rpx solid #ccc;
+    color: #ccc;
+    text-align: center;
+    margin: 0 auto;
+}

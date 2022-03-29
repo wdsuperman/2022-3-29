@@ -1,0 +1,25 @@
+<!--pages/my/guanyuwomen.wxml-->
+<image class="logo" src="/images/gywm_1.jpg"></image>
+<view class="title">
+ 松鼠环保
+</view>
+<view class="msg">
+   我公司是一家专注于闲置旧衣物回收再生再利用的企业，公司根据多年市场经验，打造出线上手机下单，线下上门回收的多元化回收模式，从而解决旧衣物处理难、回收难、销售难等问题，公司环保致力于打造国内最大的旧衣物回收平台，自主研发的回收程序已在国内多个城市投放使用，并且公司在国内建立了科学而完善的回收处理于一体的流水线，公司秉承“以诚信为本，共赢相处，共同发展”的永续理念，深受合作客户信赖，欢迎全国各地的朋友前来考察合作。
+</view>
+
+<view class="df  bt" bindtap="phone">
+ <view class="">
+    客服电话：{{tel}}
+ </view>
+</view>
+<view class="df  bt">
+ <view class="">
+   工作时间：周一到周日 08:00—18:00
+ </view>
+</view>
+
+<fuchuang fromFather="90rpx"/>
+
+<!-- <view class="msg">
+可以随时随地下单，可预约时间，价格高、上门快、服务好。
+</view> -->

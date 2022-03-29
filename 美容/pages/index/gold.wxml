@@ -1,0 +1,38 @@
+<!--pages/index/gold.wxml-->
+<image class="bg" src="/images/bg.png"></image>
+<view class="top">
+    <view class="topP">
+        <image class="icon" src="/images/icon.png"></image>
+        <view class="topNum" bindtap="jb">{{jinbi}} <image class="topArrow" src="/images/arrow.png"></image></view>
+    </view>
+    <view class="topMsg">周一至周六签到满<text>1</text>天，周日积分翻倍。</view>
+    <view class="dayList">
+        <view wx:for='{{qd}}' wx:key='key'>
+            <view class="t" wx:if="{{item.type == true}}">
+                <view>已领</view>
+            </view>
+            <view>+{{item.price}}</view>
+            <image src="{{item.img}}"></image>
+            <view>{{item.day}}</view>
+        </view>
+    </view>
+    <image class="topBtn" bindtap="open" src="/images/btn.png"></image>
+</view>
+<view class="list">
+    <view class="lists" wx:for='{{product}}' wx:key='key' bindtap="productId" data-productId="{{item.id}}">
+    <image src="{{item.photo_x}}"></image>
+    <view class="msg">
+        <view class="title">{{item.name}}</view>
+        <view class="amount">金币<text>{{item.jinbi}}</text></view>
+        <view class="buy">兑换{{item.shiyong}}</view>
+        <view class="btn">兑换</view>
+    </view>
+    </view>
+</view>
+<view class="tc" hidden="{{!tc}}"> 
+    <image class="close" bindtap="close" src="/images/close.png"></image>
+    <view>
+        <image bindtap="close" class="tcimg" src="/images/tc.png"></image>
+        <view class="tcmsg">金币 +100</view>
+    </view>
+</view>

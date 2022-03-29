@@ -1,0 +1,83 @@
+/* pages/my/address.wxss */
+page{
+    background-color: #f1f0f6;
+}
+.ts{
+    font-size: 32rpx;
+    color: #919193;
+    text-align: center;
+    margin-top: 60rpx;
+}
+.get{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 60rpx;
+}
+.get>view{
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    width: 328rpx;
+    height: 74rpx;
+    border-radius: 10rpx;
+    line-height: 74rpx;
+}
+.get1{
+    background-color: #fd5143;
+}
+.get2{
+    background-color: #f39704;
+}
+.lists>view{
+    width: 720rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+}
+.bj{
+    width: 30rpx;
+    height: 30rpx;
+    padding: 10rpx;
+}
+.listTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #eee;
+    padding: 30rpx 40rpx;
+    box-sizing: border-box ;
+}
+.name{
+    font-size: 30rpx;
+}
+.name text{
+    color: #959394;
+}
+.address,.detailed{
+    font-size: 27rpx;
+    line-height: 40rpx;
+}
+.address text{
+    color: #ff5345;
+}
+.listDown{
+    color: #959394;
+    line-height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    padding: 0 30rpx;
+}
+.listDown image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+}
+.click{
+    display: flex;
+    align-items: center;
+}

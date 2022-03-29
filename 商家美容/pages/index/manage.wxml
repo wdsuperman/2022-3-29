@@ -1,0 +1,23 @@
+
+<view class="search">
+    <input bindinput="inp" placeholder="搜索订单编号/客户名称/手机号" type="text" name="" id=""/>
+    <image src="/images/search.png"></image>
+</view>
+<view class="tab" >
+    <view wx:for="{{tab}}" bindtap="changeTab" data-title="{{item.title}}" wx:key="key" class="{{item.type ? 'active' : ''}}">
+    {{item.title}}
+    </view>
+</view>
+<view class="lists">
+    <view wx:for='{{list}}' wx:key='key'>
+        <image class="img" src="{{item.image}}"></image>
+        <view>
+            <view class="title">{{item.title}}</view>
+            <view>￥{{item.price}} 门市价:{{item.amount}}</view>
+            <view>库存:{{item.num}}  服务:{{item.type == 1? '需预约' : '免预约'}}</view>
+        </view>
+        <image class="icon" src="/images/bj.png" data-ind="{{index}}" bindtap="more"></image>
+    </view>
+</view>
+<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+</mp-actionSheet>

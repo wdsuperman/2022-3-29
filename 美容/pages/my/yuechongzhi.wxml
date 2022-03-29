@@ -1,0 +1,20 @@
+<!--pages/zhuxuehongbao/zhuxuehongbao.wxml-->
+<!-- 助学红包 -->
+<view class='head'>
+  <image src='https://dome.rs1818.cn/Data/images/zhuxuehongbao.png'></image>
+  <view class='red'>
+    <view class='text'>—— 会员卡余额 ——</view>
+    <view class='num'>￥{{recharge}}</view>
+  </view>
+</view>
+<view class='main'>
+<!-- 点击选中样式  click_item -->
+  <view class='main_item' wx:for='{{huiyuankayue}}' bindtap='hbid' data-id='{{item.id}}' style="{{pid==item.id?'color:#2aa6fb;border: 2rpx solid #2aa6fb;':''}}">
+    <view class='main_item_num'  >￥{{item.price}}</view>
+    <view class='main_item_money'  >￥{{item.yuanjia}}</view>
+  </view>
+</view>
+<view class='footer'>
+  <view class='btn' bindtap='yuepay'>立即充值</view>
+  
+</view>

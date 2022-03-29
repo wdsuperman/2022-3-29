@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/uploader/uploader",
+    "wux-upload": "/miniprogram_npm/wux-weapp/upload/index"
+  },
+  "navigationBarTitleText": "员工"
+}

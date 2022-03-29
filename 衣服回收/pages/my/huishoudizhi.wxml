@@ -1,0 +1,59 @@
+<form bindsubmit='submit'>
+	<view class="wrap">
+		<view class="inp">
+			<view class="inpText">省份</view>
+			<picker bindchange="bindPickerChangechina" value="{{shengArr[shengIndex].id}}" range="{{shengArr}}" range-key="{{'name'}}" data-type="1">
+				{{shengNull?shengArr[shengIndex].name:'--请选择--'}}
+				<!-- <view wx:if="{{shengIndex!=''}}" >
+					{{shengArr[shengIndex].name}}
+				</view>
+				<view wx:else class="xz">
+				 --请选择--
+				</view> -->
+			</picker>
+		</view>
+		<view class="inp">
+			<view class="inpText">城市</view>
+			<picker bindchange="bindPickerChangechina" value="{{shiIndex}}" range-key="{{'name'}}" range="{{shiArr}}"  data-type="2">
+				{{shiNull?shiArr[shiIndex].name:'--请选择--'}}
+				<!-- <view wx:if='{{shiIndex}}'>
+					{{shiArr[shiIndex].name}}
+				</view>
+				<view wx:else class="xz">
+				 --请选择--
+				</view> -->
+			</picker>
+		</view>
+		<view class="inp">
+			<view class="inpText">地区</view>
+			<picker bindchange="bindPickerChangechina" value="{{quIndex}}"  range-key="{{'name'}}" range="{{quArr}}"  data-type="3">
+			    {{quNull?quArr[quIndex].name:'--请选择--'}}
+				<!-- <view wx:if="{{quIndex!=''}}">
+					{{quArr[quIndex].name}}
+				</view>
+				<view wx:else class="xz">
+				 --请选择--
+				</view> -->
+			</picker>
+		</view>
+		<view class="inp">
+			<view class="inpText">详细地址</view>
+			<input name='address'placeholder-class="place-holder" value="{{address}}"  placeholder="门牌号：如2号楼1单元101" ></input>
+		</view>
+		<view class="inp">
+			<view class="inpText">联系人</view>
+			<input name='name' placeholder-class="place-holder" value="{{name}}"  placeholder="请写联系人"></input>
+		</view>
+		<view class="inp">
+			<view class="inpText">联系电话</view>
+			<input name='tel' placeholder-class="place-holder" maxlength="11" type="number" value="{{tel}}" placeholder="请输入联系电话"></input>
+		</view>
+		<view class="inp dz">
+			<view class="inpText">是否默认</view>
+			<switch name='switch' color='#55d781'  checked="{{switch?'checked':''}}"  ></switch>
+		</view>
+	</view>
+	<button form-type="submit">
+		保 存 地 址
+	</button>
+</form>

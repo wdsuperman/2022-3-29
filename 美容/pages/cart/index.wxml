@@ -1,0 +1,117 @@
+<!-- <view>
+    <view wx:for='{{list}}' wx:key='key'>
+        <view class="name">
+            <image class="logo" src="{{item.logo}}"></image>{{item.name}}
+        </view>
+        <view wx:key="key" wx:for-item='i' wx:for="{{item.goods}}" class="goods">
+            <image bindtap="slice" data-id="{{item.id}}" data-pid="{{i.pid}}" src="/images/slice{{i.type ? '' : '1'}}.png" class="slice"></image>
+            <image class="del" src="/images/close1.png"></image>
+            <image class="img" src="{{i.img}}"></image>
+            <view>
+                <view class="title">{{i.title}}</view>
+                <view class="jf">积分抵扣{{i.jf}}</view>
+                <view class="amount">
+                    <view class="price">
+                        <text>￥</text>{{i.amount}}
+                    </view>
+                    <view class="numBtn">
+                        <text class="iconBtn" bindtap="reduce" data-id="{{item.id}}" data-pid="{{i.pid}}">-</text>
+                        <text class="num">{{i.num}}</text>
+                        <text class="iconBtn" bindtap="add" data-id="{{item.id}}" data-pid="{{i.pid}}">+</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view class="down">
+    <view class="all" bindtap="allChange">
+        <image class="slice" src="/images/slice{{all ? '' : '1'}}.png"></image>
+        全选
+    </view>
+    <view class="hj">
+        合计:<text>￥{{price}}</text>
+    </view>
+    <view class="buy">
+        立即结算
+    </view>
+</view> -->
+
+<view class="page">
+<!--样式-->  
+<view class="container carts-list" wx:if="{{carts==''}}">
+    <view class="pp">
+         <image class="kong" src="../../images/cart.jpg" mode="aspectFill"/>
+         <view class="cla">购物车空空如也</view>
+    </view>
+</view>
+<!-- <view class="container carts-list" > -->
+
+  <view class='shopcar_item' wx:for="{{shop}}"  wx:for-index="index">  
+  <view class='car_top' bindtap='shopping' data-shopid='{{item.id}}'>
+    <view class='car_top_bg'><image src='../../images/car_bg.png'></image></view>
+    <view class='car_top_dianpu'><image src='../../images/car_dianpu.png'></image></view>
+    <view class='car_top_title'>{{item.name}}</view>
+    <view class='car_top_right'> > </view>
+  </view>
+  <view class='car_bottom' wx:for="{{item.slist}}" wx:for-item="data"  wx:for-index="list">
+    <view class='car_bottom_inner'>
+      <view class='car_bottom_bg'>
+        <icon wx:if="{{data.selected}}" type="success_circle"  color='red'  size="22" bindtap="bindCheckbox" data-index="{{list}}" data-spindex="{{index}}"/>
+        <icon wx:else type="circle" size="22" bindtap="bindCheckbox" data-index="{{list}}" data-spindex="{{index}}"/>
+      </view>
+      <view class='car_bottom_pic' bindtap='product'  data-productid='{{data.pid}}'><image src='{{data.photo_x}}'></image></view>
+      <text bindtap="removeShopCard" data-cartid="{{data.id}}" data-indexs="{{list}}" class="del">x</text>
+      <view class='content'>
+        <view class='content_title'>{{data.name}}</view>
+        <view class='content_keshi'>规格：{{data.g_name}}</view>
+        <view class='main_content'>
+        <view class='main_content_num'>
+          <view class='main_content_num_icon'>￥</view>
+          <view class='main_content_num_num'>{{data.price}}</view>
+          <view class='main_content_add'>
+
+            <view class='main_add'  data-index="{{list}}" data-spindex="{{index}}" bindtap="bindMinus" data-cartid="{{data.id}}">-</view>
+            <input  class='main_add1' style='width:50px;height:26px;' type="number" bindchange="bindManual" value="{{data.num}}" data-cartid="{{data.id}}" data-index="{{list}}" data-spindex="{{index}}" /> 
+            <view class='main_add' data-index="{{list}}" data-spindex="{{index}}" bindtap="bindPlus" data-cartid="{{data.id}}">+</view>
+          </view>
+        </view>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class='tuijian'>
+  <view class='tuijian_title'>为您推荐</view>
+  <view class='main'>
+    <view class='main_inner'>
+      <view class='main_item' wx:for='{{productData}}' bindtap='product' data-productid='{{item.id}}'>
+        <view class='main_item_pic'><image src='{{item.photo_x}}'></image></view>
+        <view class='main_item_title'>{{item.name}}</view>
+        <view class='main_item_money'>
+          <view class='main_item_newmoney'>￥{{item.price}}</view>
+          
+        </view>
+      </view>
+      <view class='clear'></view>
+      <view class='show_all_btn'>
+      </view> 
+    </view>
+  </view>
+</view> -->
+  <!--底部-->
+    <view class="carts-footer">
+      <view bindtap="bindSelectAll">
+        <icon wx:if="{{selectedAllStatus}}" type="success_circle" color='red' size="22" />
+        <icon wx:else type="circle" size="22" />
+        <text class='shouyin_bg_txt' style='font-size:20rpx;color:#888888;margin-left:16rpx;line-height:80rpx;'>全选</text>
+        <text style='font-size:30rpx;line-height:80rpx;margin:0 10rpx 0 28rpx;'>合计：</text>
+        <text class="reds">{{total}}</text>
+      </view>
+      <view class="button" bindtap='bindCheckout'>立即结算 </view>
+    </view>
+</view>
+

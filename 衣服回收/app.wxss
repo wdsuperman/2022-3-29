@@ -1,0 +1,46 @@
+/**app.wxss**/
+page{
+  background-color: #fafafa;
+}
+.w10{width: 10%;}
+.w20{width: 20%;}
+.w30{width: 30%;}
+.w40{width: 40%;}
+.w50{width: 50%;}
+.w60{width: 60%;}
+.w70{width: 70%;}
+.w80{width: 80%;}
+.w90{width: 90%;}
+.w100{width: 100%;}
+.p_all{
+  padding: 2%;
+}
+.color91{
+  color:#919191
+}
+.p_l5{ padding-left: 10rpx;}
+.p_l10{ padding-left: 20rpx;}
+.mt10{margin-top: 10rpx;}
+.mt30{margin-top: 30rpx;}
+.fwb{font-weight: bold;}
+.df{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.dftext{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tc{text-align: center;}
+.tl{text-align: left;}
+.tr{text-align: right;}
+button::after{
+  border: 0;
+}
+button{
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,21 @@
+<!--pages/myteam/myteam.wxml-->
+<!-- 我的团队 -->
+<view class='head'>
+  <view class='{{team1}}' bindtap='click1'>一级（{{list1count}}）</view>
+  <view class='{{team2}}' bindtap='click2'>二级（{{list2count}}）</view>
+</view>
+<view class='banner'></view>
+<!-- main -->
+<view class='main'>
+  <view class="main_item "  wx:for='{{list}}'>
+    <view class='item_pic'><image src='{{item.photo}}'></image></view>
+    <view>
+      <view class='item_name'>{{item.name}}</view>
+      <view class='item_date'>加入：{{item.addtime}}</view>
+    </view>
+    <view class='dengji'>级别：{{item.dengjiname}}</view>
+  </view>
+ </view>
+ 
+  
+  

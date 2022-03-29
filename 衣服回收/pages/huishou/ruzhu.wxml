@@ -1,0 +1,73 @@
+<form bindsubmit='submit'>
+	<view class="wrap">
+		<picker class="picker" mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+			<view class="inp">
+				<view class="inpText">城市选择</view>
+				<view class="top" wx:if='{{pickerStatus}}'>
+					{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+				</view>
+				<view wx:else class="top">
+					点击选择
+				</view>
+			</view>
+		</picker>
+		<view class="inp" bindtap="address">
+			<view class="inpText">地址选择</view>
+			<view class="top" wx:if='{{address}}'>
+				{{address}}
+			</view>
+			<view class="top" wx:else>
+				点击获取
+			</view>
+		</view>
+
+		<view class="inp">
+			<view class="inpText">姓名</view>
+			<input name='name' placeholder="请填写姓名" value="{{name}}"></input>
+		</view>
+		<view class="inp">
+			<view class="inpText">手机号</view>
+			<input name='tel' maxlength="11" type="number" value="{{tel}}" placeholder="请填写手机号"></input>
+		</view>
+		<view class="inp">
+			<view class="inpText">身份证号</view>
+			<input name='idcard' type="idcard" placeholder="请填写身份证号" value="{{sfz}}"></input>
+		</view>
+        <view class="inp">
+			<view class="inpText">账号</view>
+			<input name='zhanghao' placeholder="请填写账号" value="{{zh_name}}"></input>
+		</view>
+		<view class="inp down">
+			<view class="inpText">密码</view>
+			<input name='mima' placeholder="密码至少6位以上" password ></input>
+		</view>
+      <view class="inp">
+			<view class="inpText">邮箱</view>
+			<input name='email' placeholder="请填写邮箱,建议填写qq邮箱，方便获取信息" value="{{email}}"></input>
+		</view>
+
+	</view>
+	<button form-type="submit">
+        提 交 申 请
+	</button>
+</form>
+<view class="listWrap">
+	<view class="line">上传身份证（正面）</view>
+	<view class="update" bindtap="update" wx:if='{{!img}}'>
+		<image src="/images/add.png" class="add"></image>
+		<view>选择图片</view>
+	</view>
+	<view wx:else class="posi">
+		<image src="{{img}}" class="upImg" bindtap="fd"></image>
+		<image src="/images/del.png" bindtap="del" class="del"></image>
+	</view>
+	<view class="line">上传身份证（反面）</view>
+	<view class="update" bindtap="update1" wx:if='{{!img1}}'>
+		<image src="/images/add.png" class="add"></image>
+		<view>选择图片</view>
+	</view>
+	<view wx:else class="posi">
+		<image src="{{img1}}" class="upImg" bindtap="fd1"></image>
+		<image src="/images/del.png" bindtap="del1" class="del"></image>
+	</view>
+</view>

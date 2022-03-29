@@ -1,0 +1,37 @@
+<!--pages/tixian/tixian.wxml-->
+<!-- 申请提现页面 -->
+<view class='main'>
+  <view class='bank'>
+    <!-- <image src='../images/abc.png'></image> -->
+    <view class='bank_content'>
+      <view>{{cont.bank}}</view>
+      <view class='bank_bottom'>银行卡号：{{cont.yinhangka}}</view>
+    </view>
+    <view class='bank_right' bindtap='xiugai'> 修改信息> </view>
+  </view>
+  <view class='form'>
+    <form   bindsubmit="formSubmit">
+    <view class='form_top'>
+      <view class='form_title'>提现金额</view>
+      <view class='form_num'><view>￥</view><view class='form_input'><input name='money' type='number' bindinput='money'></input></view></view>
+      <view class='form_keyong'>可用分销额 {{cont.yue}}元   <view wx:if="{{tishi=='1'}}" style='color:red;'>提现金额大于可用金额</view></view>
+    </view>
+    <button class='btn' formType="submit">预计两天到账，确认提现</button>
+    </form>
+  </view>
+</view>
+
+<!-- 弹窗填写密码 -->
+<view class='more_more' style='display:{{xs_mima}};align-items: center;justify-content: center;flex-direction: column;' >
+
+ <view class="flex_Center" style="width:331px;height:220px;background:white;color:#333;font-size:16px;border-radius:11px;margin:auto;margin-top:50%;"> 
+ <span style="font-size:22px; position: absolute;top:33%;right:16%;" bindtap="hidden">X</span>
+ <form   bindsubmit="mima_tj">
+  填写登录密码：<input name='password' type='text' style='margin-top:10px;border:1px solid #999;' placeholder='请输入登入密码' ></input>
+   <button class='bntmma' formType="submit">提交</button>
+     </form>
+
+     
+  </view>
+  <!-- <view style='color:#48a0e0;' bindtap="wangji">忘记密码></view> -->
+</view>

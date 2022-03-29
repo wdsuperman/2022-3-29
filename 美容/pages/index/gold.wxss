@@ -1,0 +1,208 @@
+/* pages/index/gold.wxss */
+page{
+    background-color: #f4f2f3;
+}
+.lists{
+    width: 690rpx;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    display: flex;
+    align-items: center;
+}
+.lists image{
+    margin-right: 20rpx;
+    width: 240rpx;
+    height: 240rpx;
+    background-color: #ddd;
+    border-radius: 15rpx;
+}
+.title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 330rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+.amount{
+    color: #f65e0a;
+    font-size: 26rpx;
+}
+.amount text{
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.buy{
+    font-size: 24rpx;
+    color: #7b7b7b;
+}
+.btn{
+    margin-left: auto;
+    width: 80rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    background-color: #fbd00f;
+    font-size: 26rpx;
+    text-align: center;
+    border-radius: 5rpx;
+    color: #4b3400;
+}
+.msg{
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bg{
+    width: 100%;
+    height: 426rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.icon{
+    width: 60rpx;
+    height: 60rpx;
+    position: relative;
+    z-index: 2;
+}
+.topP,.topNum{
+    display: flex;
+    align-items: center;
+}
+.topArrow{
+    width: 25rpx;
+    height: 25rpx;
+    margin-left: 20rpx;
+}
+.topNum{
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 30rpx;
+    font-weight: bold;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 50rpx;
+    color: #fff;
+    margin-left: -30rpx;
+    box-sizing: border-box;
+    padding-left: 35rpx;
+    padding-right: 15rpx;
+}
+.top{
+    width: 688rpx;
+    margin: 0 auto;
+}
+.topMsg{
+    font-size: 26rpx;
+    color: #fff;
+    line-height: 80rpx;
+    display: flex;
+    align-items: center;
+}
+.topMsg text{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 33rpx;
+    height: 33rpx;
+    line-height: 33rpx;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 5rpx;
+}
+.topBtn{
+    width: 579rpx;
+    height: 113rpx;
+    display: block;
+    margin: 0 auto;
+}
+.dayList{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding-bottom: 50rpx;
+}
+.dayList image{
+    width: 56rpx;
+    height: 56rpx;
+    display: block;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+.dayList>view{
+    width: 86rpx;
+    height: 156rpx;
+    box-sizing: border-box;
+    padding: 10rpx 0;
+    background-color: #f8f8f8;
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #782515;
+    font-size: 26rpx;
+    position: relative;
+}
+.t{
+    width: 86rpx;
+    height: 156rpx;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    left: 0;
+    top: 0;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.t>view{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotate(-20deg);
+    position: absolute;
+    top: 40%;
+    width: 130%;
+    left: -15%;
+}
+.tcimg{
+    width: 540rpx;
+    height: 520rpx;
+}
+.close{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    top: 21%;
+    left: 77%;
+}
+.tc{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+.tc>view{
+    position: absolute;
+    top: 50%;
+    margin-top: -260rpx;
+    left: 50%;
+    margin-left: -270rpx;
+}
+.tcmsg{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: #701407;
+    font-size: 28rpx;
+    text-align: center;
+    padding-top: 315rpx;
+    font-weight: bold;
+}

@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index/xiadan",
+        "pages/index/hezuo",
+        "pages/index/cate",
+        "pages/index/fulc",
+        "pages/index/clandqx",
+        "pages/index/yuyue",
+        "pages/login/index",
+        "pages/dingdan/index",
+        "pages/dingdan/detail",
+        "pages/huishou/xiangqing",
+        "pages/huishou/ruzhu",
+        "pages/huishou/huishouyuan",
+        "pages/huishou/dingdanguanli",
+        "pages/my/index",
+        "pages/my/huishoudizhi",
+        "pages/my/guanyuwomen",
+        "pages/my/yijian",
+        "pages/my/dizhi",
+        "pages/my/xieyi"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#4fc770",
+        "navigationBarTitleText": "统衣回收",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#1e8f3b",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/icon/index1.png",
+                "selectedIconPath": "/images/icon/index.png"
+            },
+            {
+                "pagePath": "pages/index/xiadan",
+                "text": "一件回收",
+                "iconPath": "/images/icon/dingdan1.png",
+                "selectedIconPath": "/images/icon/dingdan.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "/images/icon/myIcon1.png",
+                "selectedIconPath": "/images/icon/myIcon.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于收货"
+        }
+    },
+    "sitemapLocation": "sitemap.json"
+}

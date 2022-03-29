@@ -1,0 +1,44 @@
+<view class="page font_14">
+    <view class="body after-navber">
+        <view class="top-bar flex-row">
+            <view class="flex-grow-1 {{status==0?'active':''}}" bindtap="fl" data-type="0">
+                <text>未使用</text>
+            </view>
+            <view class="flex-grow-1 {{status==1?'active':''}}" bindtap="fl" data-type="1" >
+                <text>已使用</text>
+            </view>
+            <view class="flex-grow-1 {{status==2?'active':''}}" bindtap="fl"  data-type="2">
+                <text>已过期</text>
+            </view>
+        </view>
+        <view class="coupon-list" wx:if="{{list&&list.length>0}}">
+            <block wx:for="{{list}}" wx:for-item="coupon" wx:key="{{item.id}}">
+                <view class="coupon-item coupon-status-{{coupon.status}}" style="margin-top:20rpx;">
+                    <image class="coupon-bg" src="/images/img-coupon-bg-{{status==0?0:1}}.png"></image>
+                    <image class="coupon-status-icon" src="/images/img-coupon-status-icon-{{coupon.status}}.png" wx:if="{{status!=0}}"></image>
+                    <view class="flex-row" style="height: 100%;overflow: hidden;position:relative">
+                        <view class="flex-grow-0 flex-col flex-y-center flex-x-center coupon-left">
+                            <view class="flex-row flex-y-bottom">
+                                <view class="fs-sm">￥</view>
+                                <view style="font-size: {{coupon.sub_price.length>4?'13':'19'}}pt;line-height: .9">
+                                    {{coupon.amount}}
+                                </view>
+                            </view>
+                            <view class="fs-sm" style="margin-top: 10rpx">{{coupon.full_money}}</view>
+                        </view>
+                        <view class="flex-grow-1 flex-y-center coupon-right">
+                            <view style="width:100%;">
+                                    <view class="flex-row flex-y-center mb-10" style="margin-bottom:5rpx;">
+                                        <view class="flex-grow-1">{{coupon.title}}</view>
+                                    </view>
+                                    <view class="fs-sm" style="color: #666666; font-size: 8pt;">{{coupon.start_time}} ~ {{coupon.end_time}}</view>
+                                    <text class="user_coupon_font" wx:if="{{coupon.appoint_type==null}}">{{coupon.desc}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view style="padding-top: 200rpx;color: #888;text-align: center" wx:else>暂无相关优惠券</view>
+    </view>
+</view>

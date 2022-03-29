@@ -1,0 +1,73 @@
+/* pages/my/ysjb.wxss */
+page{
+    background-color: #f4f4f6;
+}
+.title{
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 80rpx;
+}
+.num{
+    font-size: 78rpx;
+    text-align: center;
+    color: #fd5344;
+    font-weight: bold;
+}
+.top{
+    background-color: #fff;
+    padding-bottom: 50rpx;
+}
+.mid{
+    background-color: #fafafa;
+    border-top: 1rpx solid #e3e3e3;
+    border-bottom: 1rpx solid #e3e3e3;
+    height: 78rpx;
+    line-height: 78rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding:0 30rpx;
+    font-size: 28rpx;
+}
+.mid text{
+    color: #e1372a;
+}
+.list image{
+    width: 10rpx;
+    height: 20rpx;
+}
+.lists{
+    display: flex;
+    padding:25rpx;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #e2e2e2;
+    font-size: 28rpx;
+    line-height: 48rpx;
+    background-color: #fff;
+}
+.list{
+    
+    height: 73vh;
+    overflow: scroll;
+}
+.time{
+    color: #b5b5b5;
+}
+.gz{
+    border-radius: 50rpx;
+    border: 1rpx solid #dcdcdc;
+    width: 120rpx;
+    font-size: 24rpx;
+    line-height: 35rpx;
+    height: 35rpx;
+    text-align: center;
+}
+.get{
+    color: #fe5244;
+}
+.jn{
+    color: #23ac38;
+}

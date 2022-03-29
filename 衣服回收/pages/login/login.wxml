@@ -1,0 +1,19 @@
+<!-- 登录页面 -->
+<view class='parent'>
+  <view class='login_bg'><image src='{{url}}/login_bg.png'></image></view>
+    <form  bindsubmit="formSubmit">
+      <view class='form'>
+        <view class='form_input'><image src='{{url}}/login_phone.png'></image><input placeholder='请输入手机号' name='tel'></input></view>
+        <view class='form_input'><image src='{{url}}/login_passwd.png'></image><input placeholder='请输入密码' name='psw'></input></view>
+        <view class='form_input no_input'>
+          <view class='wangji' bindtap='wangji'>忘记密码</view>
+        </view>
+        <button  formType="submit">立即登录</button>
+        <view class='sign_in' bindtap='zhece'>还没有登录账号？马上注册</view>
+        <!-- <view class='wechat_icon'>
+          <image src='../images/wechat_icon.png'></image>
+        </view> -->
+      </view>
+    </form>
+    
+</view>

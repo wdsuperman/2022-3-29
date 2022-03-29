@@ -1,0 +1,44 @@
+/* pages/shenqingfenxiao/shenqingfenxiao.wxss */
+.head{
+  width: 750rpx;
+  height: 245rpx;
+}
+.head image{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  font-size: 28rpx;
+  color: #808080;
+  background: #f4f4f4;
+}
+.main_inner{
+  width: 693rpx;
+  margin: 0 auto;
+}
+.main_one{
+  display: flex;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+.main_one_orange{
+  color: #ee9855;
+}
+.main input{
+  width: 693rpx;
+  height: 82rpx;
+  background: white;
+  border-radius: 7rpx;
+  padding-left: 20rpx;
+  margin-bottom: 11rpx;
+  box-sizing: border-box;
+}
+.main button{
+  width: 692rpx;
+  height: 76rpx;
+  background: #009bff;
+  color: white;
+  line-height: 76rpx;
+  font-size: 27rpx;
+  margin-top: 70rpx;
+}

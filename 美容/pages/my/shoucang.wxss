@@ -1,0 +1,138 @@
+/* pages/user/shoucang.wxss */
+/*.clearbutton{
+    background: #fff; 
+    display: inline-block;
+    margin:3% 3% 2% 3%; 
+    color: #dd2727;
+    font-size: 14px;
+    width: 94%;
+}
+.shop{
+    background: #fff;
+    padding: 4%;
+    margin-bottom: 10px;
+}
+
+.sh_slt{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 4%;
+    float: left;
+}
+.sp_text{
+    float: left;
+    line-height: 20px;
+    width: 100%;
+    }
+.sp_tit{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+.sp_neb{
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #999;
+}
+.sp_jg{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    color: #fc0628;
+}
+.dle{
+    color: #999;
+    font-size: 12px;
+    float: right;
+}
+.dle image{
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+}
+.jk_bottom{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%; 
+    display: inline-flex;
+    border-bottom: 1px solid #eee; 
+    font-size: 14px;
+    color: #999;       
+}*/
+
+/**/
+.item{
+  width: 684rpx;
+  margin: 22rpx auto 0;
+  display: flex;
+}
+.item_pic{
+  width: 280rpx;
+  height: 280rpx;
+  background: gold;
+}
+.item_pic image{
+  width: 100%;
+  height: 100%;
+}
+.item_content{
+  width: 378rpx;
+  margin-left: 26rpx;
+}
+.content_title{
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.content_num{
+  font-size: 24rpx;
+  margin-top: 22rpx;
+  color: #808080;
+}
+.money{
+  display: flex;
+  font-size: 28rpx;
+  color: #e4393c;
+  margin-top: 54rpx;
+  position: relative;
+  width: 292rpx;
+  height: 34rpx;
+}
+.delete{
+  width: 32rpx;
+  height: 43rpx;
+  position: absolute;
+  bottom: -50rpx;
+  right: -80rpx;
+}
+.delete image{
+  width: 100%;
+  height: 100%;
+}
+.moneyIcon{
+  margin-right: 8rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.moneyAdd{
+  margin: 0 14rpx;
+}
+.hongbao{
+  font-size: 20rpx;
+  border: 1rpx solid #e4393c;
+  padding: 6rpx 10rpx;
+  border-radius: 10rpx;
+  line-height: 20rpx;
+}
+.search_no{
+  text-align: center;
+}image{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+
+}

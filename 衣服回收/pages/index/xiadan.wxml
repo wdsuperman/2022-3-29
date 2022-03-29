@@ -1,0 +1,107 @@
+<!--pages/index/cate.wxml-->
+<view class="bj"></view>
+<!-- 分类s -->
+<view class="con">
+    <view class="title df">
+        <view class="fwb">回收类别</view>
+        <view class="zx df">  <image src="/images/cate_1.jpg"/>详情类别课咨询客服</view>
+    </view>
+    <view class="df flex-start">
+        <view wx:for="{{list}}" bindtap="changeBrand" data-id="{{item.id}}" wx:key="item" class="list {{item.status ? 'brandkgList' : ''}}" >
+          <image src="{{item.photo}}"/>
+          <view> {{item.name}}</view>
+        </view>
+    </view>
+</view>
+<!-- 分类f -->
+<!-- 地址s -->
+<view class="con">
+    <view class="title df">
+        <view class="fwb">地址信息</view>
+        <!-- <view class="qj_but  tc" bindtap="click" data-type="1"> 上门范围</view> -->
+    </view>
+    <view class="df hs_address" bindtap="click" data-type="3">
+        <view class="">{{address_xq}} </view>
+        <image class="arrow" src="/images/arrow.png"></image>
+    </view>
+    <view class="title df">
+        <view class="fwb">上门时间</view>
+    </view>
+    <view class="df hs_address">
+        <view class="">上门时间 </view>
+        <view class="df">
+            <picker class="xz {{pickerStatus ? 'active' : ''}}" mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+			<view wx:if='{{pickerStatus}}'>
+				{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+			</view>
+			<view wx:else class="xz">
+				请选择时间
+			</view>
+		</picker>
+        <image class="arrow" src="/images/arrow.png"></image>
+        </view>
+       
+    </view>
+    <view class="df hs_address">
+        <view class="">备注[选填] </view>
+        <view class="df" bindtap="click" data-type="2">
+			<view  class="xz">
+               {{content?content:'当前无备注'}}
+				
+			</view>
+        <image class="arrow" src="/images/arrow.png"></image>
+        </view>
+    </view>
+</view>
+<!-- 地址f -->
+<!-- 预计重量s -->
+<view class="con">
+    <view class="title df">
+        <view class="fwb">预计重量</view>
+        <view class="zx "> 重量仅供参考，以实际重量为准</view>
+    </view>
+    <view class="df  flex-start">
+        <view bindtap="changeKg" data-title="{{item.title}}" class="kgList {{item.status ? 'activekgList' : ''}}" wx:for='{{array}}' wx:key='key'>
+		    <view class="zl_tit1 fwb">{{item.title}}</view>
+            <view>{{item.title1}}</view>
+	    </view>
+    </view>
+</view>
+<!-- 预计重量f -->
+
+
+<fuchuang  fromFather="200rpx"/>
+
+<view class="click" bindtap="submit">
+确认提交
+</view>
+
+<!-- 上门弹窗 -->
+<view class="tanchuang" wx:if="{{tanchuang}}">
+    <view class="xuzhi">
+        <image class="xuzhiClose" bindtap="closeTanchuang" data-type="1" src="/images/index-close1.png"></image>
+        <view class='xieyi'>上门范围</view>
+        <view class="xuzhiMsg">
+           <rich-text nodes="{{smfw}}"></rich-text>
+        </view>
+        <view class="tyxz" >
+         
+        </view>
+    </view>
+</view>
+
+<!-- 备注 -->
+<view class="tanchuang" wx:if="{{bztanchuang}}">
+    <view class="xuzhi">
+        <image class="xuzhiClose" bindtap="closeTanchuang" data-type="2" src="/images/index-close1.png"></image>
+        <view class='xieyi'>备注</view>
+        <view class="xuzhiMsg">
+          <textarea placeholder="{{content?'':'填写备注(1-50字)'}}" maxlength="50" bindblur="bindTextAreaBlur">{{content}}</textarea>
+        </view>
+        <view class="tyxz" >
+        </view>
+    </view>
+</view>
+
+
+

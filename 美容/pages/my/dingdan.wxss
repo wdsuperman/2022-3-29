@@ -1,0 +1,127 @@
+/* pages/dingdan/dingdan.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background: #f2f8fb;
+}
+.head{
+  width: 750rpx;
+  height: 84rpx;
+  display: flex;
+  line-height: 84rpx;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+.head view{
+  width: 205rpx;
+  color: #808080;
+  font-size: 28rpx;
+  text-align: center;
+ /*  margin: 0 22.5rpx; */
+  border-bottom:3rpx solid #ffffff; 
+}
+.head .clickthere{
+  color: #0079ff;
+  border-bottom: 3rpx solid #0079ff;
+}
+.banner{
+  width: 750rpx;
+  height: 84rpx;
+}
+.main{
+  width: 750rpx;
+  padding: 34rpx 0;
+}
+.main_item{
+  width: 688rpx;
+ /* height: 325rpx;*/
+  border: 1rpx solid #bfbfbf;
+  border-radius: 15rpx;
+  margin: 0 auto 33rpx;
+  background: white;
+}
+.main_item_top{
+  height: 84rpx;
+  line-height: 84rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #bfbfbf;
+  overflow: hidden;
+}
+.dingdanhao{
+  float: left;
+  font-size: 23rpx;
+  color: #8d8d8d;
+  display: flex;
+  margin-left: 29rpx;
+}
+.dingdannum{
+  color: black;
+}
+.zhuangtai{
+  font-size: 24rpx;
+  float: right;
+  margin-right: 33rpx;
+}
+.main_item_bottom{
+  width: 626rpx;
+  margin: 29rpx auto 0;
+  display: flex;
+ /* border-bottom:1rpx solid #bfbfbf; */
+ padding-bottom: 10rpx
+
+}
+.main_item_pic{
+  width: 214rpx;
+  height: 172rpx;
+  margin-right: 24rpx;
+}
+.main_item_pic image{
+  width: 100%;
+  height: 100%;
+}
+.main_bottom_content{
+  width: 80%
+
+}
+.title{
+  font-size: 27rpx;
+}
+.subtitle{
+  font-size: 22rpx;
+  color: #808080;
+  margin: 15rpx 0;
+}
+.date{
+  font-size: 16rpx;
+}
+.jine{
+  height: 48rpx;
+  overflow: hidden;
+  line-height: 48rpx;
+}
+.jine_text{
+  font-size: 22rpx;
+  float: left;
+}
+.jinemoney{
+  font-size: 21rpx;
+  color: #0079ff;
+  margin-left: 10rpx;
+  float: left;
+}
+.delete{
+  /* width: 104rpx; */
+  height: 48rpx;
+  padding: 0.5%;
+  color: white;
+  font-size: 22rpx;
+  background: #0079ff;
+  border-radius: 10rpx;
+  line-height: 48rpx;
+  text-align: center;
+  float: right;
+ 
+}

@@ -1,0 +1,84 @@
+<swiper next-margin='20rpx' display-multiple-items='1.01'>
+    <swiper-item>
+        <image></image>
+    </swiper-item>
+    <swiper-item>
+        <image></image>
+    </swiper-item>
+    <swiper-item>
+        <image></image>
+    </swiper-item>
+</swiper>
+<view class="info">
+    <view class="title">{{info.name}}</view>
+    <view class="starList">
+        <image class="star" src="/images/star.png"></image>
+        <image class="star" src="/images/star.png"></image>
+        <image class="star" src="/images/star.png"></image>
+        <text class="pf">4.5</text>
+        <text class="yy">500预约</text>
+    </view>
+    <view class="msg">营业中 周日 10:10-22:00</view>
+    <view class="msg">河北大街 <image class="phone"></image>
+    </view>
+</view>
+<view class="tab">
+    <view wx:for="{{tab}}" wx:key="key" bindtap="tab" data-index="{{index}}">
+        {{item.title}}
+        <view hidden="{{!item.type}}" class="line"></view>
+    </view>
+</view>
+<view class="list" wx:if="{{index == 0}}">
+    <view wx:for="{{product_jx}}" wx:key="key" bindtap="productId" data-productId="{{item.id}}">
+        <image class="img" src="{{item.photo_x}}"></image>
+        <view class="title1">{{item.name}}</view>
+        <view class="jf">积分抵扣{{item.pro_jf}}</view>
+        <view class="aot">
+            <view class="price">
+                <text>￥</text>{{item.price}}
+            </view>
+            <view class="buy">购买</view>
+        </view>
+    </view>
+</view>
+<view class="list" wx:if="{{index == 1}}">
+    <view wx:for="{{product}}" wx:key="key">
+        <image class="img" src="{{item.photo_x}}"></image>
+        <view class="title1">{{item.name}}</view>
+        <view class="jf">积分抵扣{{item.pro_jf}}</view>
+        <view class="aot">
+            <view class="price">
+                <text>￥</text>{{item.price}}
+            </view>
+            <view class="buy">购买</view>
+        </view>
+    </view>
+</view>
+<view class="list" wx:if="{{index == 3}}">
+    <view wx:for="{{product_more}}" wx:key="key">
+        <image class="img" src="{{item.photo_x}}"></image>
+        <view class="title1">{{item.name}}</view>
+        <view class="jf">积分抵扣{{item.pro_jf}}</view>
+        <view class="aot">
+            <view class="price">
+                <text>￥</text>{{item.price}}
+            </view>
+            <view class="buy">购买</view>
+        </view>
+    </view>
+</view>
+
+
+<view wx:if="{{index == 2}}">
+    <view class="downList" wx:for="{{mrs}}">
+        <image class="userAvatar" src="{{item.photo}}"></image>
+        <view class="info1">
+            <view class="name1">{{item.name}}<text class="occupation">{{item.zhiwu}}</text></view>
+            <view class="msg1">{{item.intro}}</view>
+            <!-- <view class="starImg" >
+                <image class="star1" src="/images/star.png"></image> <text class="">101预约</text>
+            </view> -->
+        </view>
+        <view class="icon" wx:if='{{item.renzheng == 1}}'>V认证</view>
+    </view>
+</view>

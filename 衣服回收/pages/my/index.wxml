@@ -1,0 +1,17 @@
+<!--pages/my/index.wxml-->
+<view class="top">
+    <open-data type="userAvatarUrl" class="avatar"></open-data>
+    <!-- <image class="avatar" src=""></image> -->
+    <view class="info mt10">
+        <view><open-data type="userNickName" lang="zh_CN"></open-data></view>
+        <view>ID:{{uid}}</view>
+    </view>
+</view>
+<view class="lists">
+    <button wx:for='{{btnLists}}' class="btnLists" bindtap="jump" data-type="{{item.type}}">
+        <image class="icon" src="{{item.img}}"></image>
+        <view>{{item.title}}</view>
+        <image class="arrow" src="/images/my_5.png"></image>
+    </button>
+</view>
+<view class="xieyi" bindtap="xieyi">隐私协议</view>

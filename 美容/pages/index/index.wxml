@@ -1,0 +1,84 @@
+<swiper indicator-dots>
+  <swiper-item class="banner" wx:key='key' wx:for="{{banner}}" bindtap="top" data-type="{{item.type}}"
+    data-id="{{item.id}}" data-action="{{item.action}}">
+    <image src="{{item.photo}}"></image>
+  </swiper-item>
+</swiper>
+<view class="searchWrap">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    {{array[index]}}
+    <image class="arrow" src="/images/slide0.png"></image>
+  </picker>
+  <view class="search">
+    <image src="/images/search1.png"></image>
+    <view>搜索商品</view>
+  </view>
+</view>
+<view class="nav">
+  <view class="navTop">
+    <view wx:for="{{tabs}}" wx:key='key' bindtap="fenlei" data-id="{{item.id}}">
+      <image src="{{item.image}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <image bindtap="banner" class="navImg" src="/images/indexBanner.png"></image>
+  <view>
+    <view class="filter">
+      <view wx:for='{{filter}}' wx:key='key' bindtap="changeFilter" data-ind="{{index}}">
+        <view class="filterTitle">{{item.title}}</view>
+        <view class="filterMsg {{item.type ? 'active' : ''}}">{{item.msg}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="down" wx:if="{{tab == 1}}">
+  <block wx:for="{{mrs}}" wx:key='key'>
+    <view class="downList" catchtap="shop" data-shopid="{{item.shop_id}}">
+      <image class="userAvatar" src="{{item.photo}}"></image>
+      <view class="info">
+        <view class="name">{{item.name}}<text class="occupation">{{item.zhiwu}}</text></view>
+        <view class="msg">{{item.shop_name}}</view>
+        <view class="starImg">
+          <!-- <image class="star"></image> <text class="">101预约</text> -->
+        </view>
+      </view>
+      <view class="icon" wx:if="{{item.renzheng != 0}}">V认证</view>
+    </view>
+    <view class="goods" wx:for='{{item.product}}' wx:for-item='i' bindtap="productId" data-productId="{{i.id}}">
+      <image src="/images/buy_icon.png"></image>
+      <view class="goodsTitle">{{i.name}}</view>
+      <view class="price"><text class="money">￥</text>{{i.price}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="down1" wx:if="{{tab == 0}}">
+  <view class="down2List" wx:for='{{goods}}' wx:key="key" bindtap="productId" data-productId="{{item.id}}">
+    <image class="downPic" src="{{item.photo_x}}"></image>
+    <view class="down2listMsg">
+      <view class="shopName">{{item.name}}</view>
+      <view class="shopPrice"><text class="money">￥</text>{{item.price}} <text class="shopdk">积分抵扣{{item.pro_jf}}</text>
+      </view>
+      <view class="xf"><text class="peo">消费{{item.shiyong}}</text><text class="buy">购买</text></view>
+      <view class="shopTitle" catchtap="shop" data-shopid="{{item.shop_id}}">
+        <image class="logo" src="{{item.logo}}"></image><text class="peo">{{item.shop_name}}</text>
+        <image class="arw" src="/images/recruit_icon_02.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='notice'>
+  公告：
+  <view class="left">
+    <view class="left-box">
+      <view class="left-text"></view>
+      <view class='content-box'>
+        <view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
+      </view>
+      <view class="right-text"></view>
+    </view>
+  </view>
+</view>

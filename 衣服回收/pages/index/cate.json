@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "fuchuang":"/pages/fuchuang"
+  },
+  "navigationBarTitleText": "分类与指南",
+  "navigationBarTextStyle": "white"
+}

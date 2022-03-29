@@ -1,0 +1,27 @@
+<view class="search">
+    <input bindinput="inp" bindconfirm='search' placeholder="搜索订单编号/客户名称/手机号" type="search" name="" id="" />
+    <image src="/images/search.png"></image>
+</view>
+<view class="tab">
+    <view wx:for="{{tab}}" bindtap="changeTab" data-title="{{item.title}}" wx:key="key" class="{{item.type ? 'active' : ''}}">
+        {{item.title}}
+    </view>
+</view>
+<scroll-view scroll-y bindscrolltolower='scroll' scroll-top='{{scrolltop}}'>
+    <view class="lists">
+        <view wx:for='{{list}}' wx:key='key'>
+            <image class="img" src="{{item.photo_x}}"></image>
+            <view>
+                <view class="title">{{item.name}}</view>
+                <view>￥{{item.price}} 门市价:{{item.yuanjia}}</view>
+                <view>库存:{{item.num}} 服务:{{item.is_shiwu == 1? '需预约' : '免预约'}}</view>
+            </view>
+            <image class="icon" src="/images/bj.png" data-id="{{item.id}}" bindtap="more"></image>
+        </view>
+    </view>
+</scroll-view>
+<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+</mp-actionSheet>
+<view class="add" bindtap="add">
+    添加商品
+</view>

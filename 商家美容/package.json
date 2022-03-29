@@ -1,0 +1,16 @@
+{
+  "name": "wx",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "weui-miniprogram": "^1.2.3",
+    "wux-weapp": "^3.8.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
