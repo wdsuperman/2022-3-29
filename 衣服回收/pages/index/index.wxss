@@ -3,7 +3,7 @@ page {
   margin-bottom: 20rpx;
 }
 
-swiper {
+.swiper1 {
   width: 90%;
   height: 250rpx;
   margin: 0 auto;
@@ -14,7 +14,15 @@ swiper {
   margin-left: -45%;
   left: 50%;
 }
-
+.swiper2{
+  height: 50rpx;
+  width: 100%;
+}
+.swiper2 swiper-item{
+  width: 100%;
+  height: 100%;
+  line-height: 50rpx;
+}
 .top {
   height: 190rpx;
   background-color: #c8431a;

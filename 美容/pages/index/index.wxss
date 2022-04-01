@@ -3,7 +3,11 @@
 } */
 swiper,.banner,.banner image{
   width: 100%;
-  height: 300rpx;
+  height: 417rpx;
+  
+}
+swiper{
+  margin-top: 30rpx;
 }
 .searchWrap{
   display: flex;

@@ -31,7 +31,7 @@
     </view>
   </view>
 </view>
-<view class="down" wx:if="{{tab == 1}}">
+<view class="down" wx:if="{{tab == 3}}">
   <block wx:for="{{mrs}}" wx:key='key'>
     <view class="downList" catchtap="shop" data-shopid="{{item.shop_id}}">
       <image class="userAvatar" src="{{item.photo}}"></image>

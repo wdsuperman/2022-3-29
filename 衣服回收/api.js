@@ -6,7 +6,7 @@ function getAPI(url, data) {
     })
     return new Promise(function (resolve, reject) {
         wx.request({
-            url:'https://sshs.rs1818.cn/index.php/api/' + url,
+            url:'https://tyhs.rs1818.cn/index.php/api/' + url,
             // url:'http://localhost/yifuhuishouxcx/index.php/api/' + url,
             method: 'post',
             data,

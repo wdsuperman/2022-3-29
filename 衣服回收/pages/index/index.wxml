@@ -3,11 +3,13 @@
 </view>
 <view class="gonggao">
   <image src="/images/gonggao.png"></image>
-  <view>
-    陈** 177*****0111 预约回收
-  </view>
+  <swiper class="swiper2" autoplay circular vertical >
+    <swiper-item wx:for='{{newOrders}}' wx:key='key' catchtouchmove='catchTouchMove'>
+      {{item}}
+    </swiper-item>
+  </swiper>
 </view>
-<swiper autoplay='true' indicator-dots='true' indicator-active-color='#659489' indicator-color='rgba(0, 0, 0, .1)'
+<swiper class="swiper1" autoplay='true' indicator-dots='true' indicator-active-color='#659489' indicator-color='rgba(0, 0, 0, .1)'
   bindtap="banner">
   <block wx:for="{{lunbo}}" wx:item="{{key}}">
     <swiper-item>

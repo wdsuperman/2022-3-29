@@ -1,0 +1,4 @@
+<!--pages/index/gold1.wxml-->
+<image class="img1" src="/images/dk1.jpg"></image>
+<image class="img2" src="/images/dk2.jpg"></image>
+<image class="img3" src="/images/dk3.jpg"></image>

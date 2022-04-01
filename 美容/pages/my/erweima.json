@@ -1,3 +1,5 @@
 {
-    "navigationBarTitleText": "分享码"
+    "navigationBarTitleText": "分享码",
+    "navigationBarBackgroundColor": "#d8655e",
+    "navigationBarTextStyle": "white"
 }

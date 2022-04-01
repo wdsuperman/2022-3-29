@@ -1,14 +1,13 @@
-
-<view><image src='../../images/fenxiao.jpg' style='width:100%;height:250px;'></image></view>
-<view style='padding-left:10px;'>分享二维码，让好友成为您的粉丝，好友购买课程并使用后，您将获得一定比例的佣金</view>
-<view>
-<view style='margin-top:10px;' >
-<view style='margin:0 auto;width:150px;height:150px;'><image src='{{fxphoto}}' style='width:150px;height:150px;'></image>
-<view style='color:#fff;margin-top:10px;font-size:14px;text-align:center;background:#2a77f9;height:35px; line-height: 35px;border-radius: 5px;' bindtap='baocun'>点击保存分享码</view>
-<button open-type='share'  class=' ' style='color:#fff;margin-top:10px;font-size:14px;text-align:center;background:#2a77f9;'>
- 一键转发
-</button>  
+<view class="wrap">
+    <image class="fximg" src='../../images/fenxiao.jpg' style='width:100%;height:250px;'></image>
+    <view>分享二维码，让好友成为您的粉丝，</view>
+    <view>好友购买商品，您将获得一定比例佣金~</view>
+    <image src='{{fxphoto}}' style='width:160rpx;height:160rpx;margin-top:50rpx'></image>
+    <view class="downText">长按识别二维码，快来报名！</view>
 </view>
+<view class="down">
+    <button class="bc" bindtap='baocun'>点击保存</button>
+    <button class="zf" open-type='share'>
+        一键转发
+    </button>
 </view>
-</view>
-

@@ -1,0 +1,14 @@
+/* pages/index/gold1.wxss */
+image{
+    display: block;
+    width: 100%;
+}
+.img1{
+    height: 1392rpx;
+}
+.img2{
+    height: 1083rpx;
+}
+.img3{
+    height: 604rpx;
+}

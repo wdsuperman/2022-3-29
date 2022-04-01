@@ -25,7 +25,8 @@
         "pages/my/user-lingqu",
         "pages/my/address",
         "pages/my/ysjb",
-        "pages/my/xieyi"
+        "pages/my/xieyi",
+        "pages/index/gold1"
     ],
     "permission": {
         "scope.userLocation": {

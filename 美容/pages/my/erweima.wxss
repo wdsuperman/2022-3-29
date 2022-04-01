@@ -1,1 +1,59 @@
 /* pages/fenxiao/erweima.wxss */
+page{
+    background-color: #d8655e;
+    padding-top:5vh;
+}
+.wrap{
+    width: 650rpx;
+    background-color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 26rpx;
+    color: #666666;
+    line-height: 48rpx;
+    border-radius: 20rpx;
+}
+.fximg{
+    width: 100%;
+    height: 550rpx;
+}
+.downText{
+    color: #cccccc;
+    font-size: 20rpx;
+    line-height: 90rpx;
+}
+.down{
+    width: 650rpx;
+	background-color: #ffffff;
+    border-radius: 20rpx;
+    margin: 0 auto;
+    margin-top: 5rpx;
+    display: flex;
+    justify-content: space-around;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+.down button{
+    width: 230rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+	background-color: #c09b5f;
+    border-radius: 30rpx;
+    font-size: 26rpx;
+}
+.down .bc{
+    background-color: #fff;
+    border: solid 1rpx #d8655e;
+    color: #ca4527;
+}
+.down .zf{
+    background-image: linear-gradient(0deg, 
+		#b22a20 0%, 
+		#dd7044 100%), 
+	linear-gradient(
+		#c09b5f, 
+		#c09b5f);
+	background-blend-mode: normal, 
+        normal;
+    color: #fff;
+}

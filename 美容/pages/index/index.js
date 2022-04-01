@@ -85,6 +85,10 @@ Page({
       wx.navigateTo({
         url: `./business?shopid=${id}`,
       })
+    }else if(type == 'product'){
+      wx.navigateTo({
+        url: '/pages/index/details?productId=' + action,
+      })
     }
   },
   shop(e){
@@ -133,7 +137,7 @@ Page({
   },
   banner() {
     wx.navigateTo({
-      url: '/pages/index/gold',
+      url: '/pages/index/gold1',
     })
   },
   /**

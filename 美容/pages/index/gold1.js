@@ -1,38 +1,18 @@
-var app=getApp();
-var is_submit=true;
-const api = require('../../api.js')
+// pages/index/gold1.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-     tel:'15227266674',
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        
-        api.getAPI('index/web',{
-            id:2
-           }).then(res => {
-              wx.hideLoading({
-                success: (res) => {},
-              })
-              console.log(res.data)
-              if (res.data.status == 1) {
-                this.setData({
-                  tel: res.data.info.content,
-                })
-              } else {
-                wx.showToast({
-                  title: res.data.err,
-                  icon: 'none'
-                })
-              }
-            })
+
     },
 
     /**
@@ -76,11 +56,7 @@ Page({
     onReachBottom: function () {
 
     },
-    phone(){
-        wx.makePhoneCall({
-            phoneNumber: this.data.tel,
-          })
-    },
+
     /**
      * 用户点击右上角分享
      */

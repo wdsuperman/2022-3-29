@@ -42,7 +42,7 @@
     </view>
 </view>
 <view class="list" wx:if="{{index == 1}}">
-    <view wx:for="{{product}}" wx:key="key">
+    <view wx:for="{{product}}" wx:key="key"  bindtap="productId" data-productId="{{item.id}}">
         <image class="img" src="{{item.photo_x}}"></image>
         <view class="title1">{{item.name}}</view>
         <view class="jf">积分抵扣{{item.pro_jf}}</view>
@@ -55,7 +55,7 @@
     </view>
 </view>
 <view class="list" wx:if="{{index == 3}}">
-    <view wx:for="{{product_more}}" wx:key="key">
+    <view wx:for="{{product_more}}" wx:key="key"  bindtap="productId" data-productId="{{item.id}}">
         <image class="img" src="{{item.photo_x}}"></image>
         <view class="title1">{{item.name}}</view>
         <view class="jf">积分抵扣{{item.pro_jf}}</view>

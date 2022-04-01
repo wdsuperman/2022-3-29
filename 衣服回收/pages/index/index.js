@@ -60,7 +60,7 @@ Page({
     }
   },
 
-
+  catchTouchMove(){},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -74,6 +74,7 @@ Page({
        if (res.data.status == 1) {
         that.setData({
           lunbo: res.data.lunbo,
+          newOrders:res.data.newOrders
         });
        } else {
          wx.showToast({

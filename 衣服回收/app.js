@@ -13,8 +13,8 @@ App({
   d: {
     // hostUrl: 'http://localhost/yifuhuishouxcx/index.php/Api',
     // img: 'http://localhost/yifuhuishouxcx/Data/images',
-    hostUrl: 'https://sshs.rs1818.cn/index.php/Api',
-    img: 'https://sshs.rs1818.cn/Data/images',
+    hostUrl: 'https://tyhs.rs1818.cn/index.php/Api',
+    img: 'https://tyhs.rs1818.cn/Data/images',
     userId: 1,
     oneuid: '',//推荐人id
     url_title: '',

@@ -95,7 +95,14 @@ Page({
             pages
         }
         api.getAPI('Adminorder/index',data).then(res => {
-            console.log(res)
+            if(res.data.status){
+
+            }else{
+                wx.showToast({
+                  title: res.data.err,
+                  icon:'none'
+                })
+            }
         })
     },
     inp(e){
