@@ -1,5 +1,7 @@
 {
     "pages": [
+        
+        "pages/index/search",
         "pages/index/index",
         "pages/index/pay_details",
         "pages/category/index",

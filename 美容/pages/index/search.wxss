@@ -1,0 +1,32 @@
+/* pages/index/search.wxss */
+.searchWrap{
+    display: flex;
+    align-items: center;
+    height: 85rpx;
+  }
+  .arrow{
+    width: 13px;
+      height: 8px;
+  }
+  .search{
+    width: 586rpx;
+    height: 59rpx;
+    border: 1rpx solid #aeaeae;
+    color: #aaa;
+    font-size: 28rpx;
+    display: flex;
+    border-radius: 100rpx;
+    align-items: center;
+  }
+  .search image{
+    width: 30rpx;
+    height: 30rpx;
+    margin: 0 18rpx;
+  }
+  picker{
+    font-size: 28rpx;
+    height: 100%;
+    padding: 0 22rpx;
+    display: flex;
+    align-items: center;
+  }

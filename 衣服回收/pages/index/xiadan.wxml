@@ -4,7 +4,7 @@
 <view class="con">
     <view class="title df">
         <view class="fwb">回收类别</view>
-        <view class="zx df">  <image src="/images/cate_1.jpg"/>详情类别课咨询客服</view>
+        <view class="zx df">  <image src="/images/cate_1.jpg"/>详细类别可咨询客服</view>
     </view>
     <view class="df flex-start">
         <view wx:for="{{list}}" bindtap="changeBrand" data-id="{{item.id}}" wx:key="item" class="list {{item.status ? 'brandkgList' : ''}}" >

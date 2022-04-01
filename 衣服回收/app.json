@@ -40,7 +40,7 @@
             },
             {
                 "pagePath": "pages/index/xiadan",
-                "text": "一件回收",
+                "text": "一键回收",
                 "iconPath": "/images/icon/dingdan1.png",
                 "selectedIconPath": "/images/icon/dingdan.png"
             },

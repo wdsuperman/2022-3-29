@@ -5,11 +5,11 @@
   </swiper-item>
 </swiper>
 <view class="searchWrap">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <picker disabled value="{{index}}" range="{{array}}" bindtap="search" data-type="0">
     {{array[index]}}
     <image class="arrow" src="/images/slide0.png"></image>
   </picker>
-  <view class="search">
+  <view class="search"  bindtap="search" data-type="1">
     <image src="/images/search1.png"></image>
     <view>搜索商品</view>
   </view>

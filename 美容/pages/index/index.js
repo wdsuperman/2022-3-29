@@ -1,4 +1,5 @@
 const api = require('../../api.js')
+var app = getApp()
 Page({
 
   /**
@@ -78,6 +79,12 @@ Page({
     goods:[],
     mrs:[]
   },
+  search(e){
+    let {type} = e.currentTarget.dataset
+      wx.navigateTo({
+        url: `/pages/index/search?type=${type}`,
+      })
+  },
   top(e){
     console.log(e)
     let {action,id,type} = e.currentTarget.dataset
@@ -144,6 +151,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    if(options){
+      let uid = options.oneuid
+      app.d.oneuid = uid
+    }
     let that = this
     wx.getLocation({
       type: 'wgs84',

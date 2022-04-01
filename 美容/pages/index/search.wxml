@@ -1,0 +1,13 @@
+<view class="searchWrap">
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key='name'>
+        <view class="picker">
+            <!-- {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}} -->
+            选择
+            <image class="arrow" src="/images/slide0.png"></image>
+        </view>
+    </picker>
+    <view class="search">
+        <image src="/images/search1.png"></image>
+        <view>搜索商品</view>
+    </view>
+</view>
