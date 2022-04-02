@@ -73,6 +73,10 @@ Page({
       title: '授权中',
     })
     var user = app.data;
+    var oneuid = app.d.oneuid
+    if (oneuid == '') {
+      oneuid = 1
+    }
     wx.request({
       url: app.d.hostUrl + 'Login/authlogin',
       method: 'post',
@@ -82,7 +86,8 @@ Page({
         NickName: user.NickName,
         HeadUrl: user.HeadUrl,
         openid: user.OPEN_ID,
-        tel: app.data.tel
+        tel: app.data.tel,
+        oneuid
       },
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'

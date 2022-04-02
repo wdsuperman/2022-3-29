@@ -1,9 +1,10 @@
 <!--pages/my/index.wxml-->
 <view class="top">
-    <open-data type="userAvatarUrl" class="avatar"></open-data>
-    <!-- <image class="avatar" src=""></image> -->
+    <open-data wx:if='{{avatar == ""}}' type="userAvatarUrl" class="avatar"></open-data>
+    <image wx:else class="avatar" src="{{avatar}}"></image>
     <view class="info mt10">
-        <view><open-data type="userNickName" lang="zh_CN"></open-data></view>
+        <view wx:if='{{name == ""}}'><open-data type="userNickName" lang="zh_CN"></open-data></view>
+        <view wx:else>{{name}}</view>
         <view>ID:{{uid}}</view>
     </view>
 </view>

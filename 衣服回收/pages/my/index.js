@@ -24,7 +24,9 @@ Page({
                 type:3
             },
             
-        ]
+        ],
+        name:'',
+        avatar:''
     },
     xieyi(){
       wx.navigateTo({
@@ -61,7 +63,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-     
+      let name = wx.getStorageSync('name')
+      let avatar = wx.getStorageSync('avatar')
+      this.setData({
+        name,
+        avatar
+      })
 
     },
 

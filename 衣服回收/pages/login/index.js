@@ -25,7 +25,8 @@ Page({
                   encryptedData: e.encryptedData,
               }).then(res => {
   
-
+                wx.setStorageSync('name', e.userInfo.nickName)
+                wx.setStorageSync('avatar', e.userInfo.avatarUrl)
                   var data = res.data;
                   data['NickName']= e.userInfo.nickName;
                   data['HeadUrl']= e.userInfo.avatarUrl;
