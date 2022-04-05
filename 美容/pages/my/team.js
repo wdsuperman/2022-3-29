@@ -40,11 +40,12 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    let uid = wx.getStorageSync('uid')
     wx.request({
       url: app.d.ceshiUrl + 'Fenxiao/team',
       method: 'post',
       data: {
-        uid: app.d.userId,
+        uid,
       },
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'

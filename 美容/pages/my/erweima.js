@@ -9,11 +9,12 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    let uid= wx.getStorageSync('uid')
     wx.request({
       url: app.d.ceshiUrl + 'Fenxiao/getwxaqrcode',
       method: 'post',
       data: {
-        uid: app.d.userId,
+        uid
       },
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -46,7 +47,9 @@ Page({
         wx.saveImageToPhotosAlbum({
           filePath: sres.path,
           success: function (fres) {
-            console.log(fres);
+            wx.showToast({
+              title: '保存成功',
+            })
           }
         })
       }

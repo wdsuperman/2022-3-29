@@ -65,7 +65,7 @@
 //     }
 // })
 
-
+const api = require('../../api.js')
 var app = getApp();
 Page({
   firstIndex: -1,
@@ -176,12 +176,30 @@ Page({
   // 传值
   onLoad: function (option) {
     var that = this;
-    console.log(option)
+    let {productId} = option
+    if(option.productId){
+      productId = option.productId
+    }
     that.setData({
-      productId: option.productId,
+      productId,
     });
-    that.loadProductDetail();
 
+    if(option.oneuid){
+      app.d.oneuid = option.oneuid
+    }
+    that.loadProductDetail();
+    var that = this
+    var uid = wx.getStorageSync('uid')
+    if(!uid){
+      wx.showModal({
+        title:'为了您更好的体验,请先同意授权',
+        success(){
+          wx.navigateTo({
+            url: `/pages/login/index`,
+          })
+        }
+      })
+    }
   },
   // 商品详情数据获取
   loadProductDetail: function () {
@@ -456,12 +474,10 @@ Page({
     var pid = this.data.productId
     var info = pid + ',' + uid;
     let userinfo = wx.getStorageSync('userInfo')
-    var title = '好友' + userinfo.NickName + ',分享给您“' + this.data.itemData.name+'”'
-    console.log(pid)
-    console.log(uid)
+    var title = '好友' + userinfo.nickName + ',分享给您“' + this.data.itemData.name+'”'
     return {
       title: title,
-      path: '/pages/index/index?oneuid=' + uid + '&info=' + pid,
+      path: '/pages/index/details?oneuid=' + uid + '&productId=' + pid,
       success: function (res) {
       },
       fail: function (res) {
@@ -869,69 +885,77 @@ mianfei:function(){
     this.setData({
       maskHidden: false
     });
-    wx.showToast({
-      title: '海报生成中...',
-      icon: 'loading',
-      duration: 2000
-    });
+    let pro_id =this.data.productId
+    let uid =wx.getStorageSync('uid')
+    api.getAPI('product/fxproduct',{pro_id,uid}).then(res => {
+      console.log(res)
+      wx.showToast({
+        title: '海报生成中...',
+        icon: 'loading',
+        duration: 2000
+      });
+      wx.downloadFile({
+        url: that.data.bannerItem[0], //产品图
+        success: function (res) {
+          console.log(res.tempFilePath)
+          console.log(11)
+          if (res.statusCode === 200) {
+            that.setData({
+              path: res.tempFilePath
+            })
+          } else {
+            wx.showToast({
+              title: '背景下载失败！',
+              icon: 'none',
+              duration: 2000,
+              success: function () {
+                that.setData({
+                  path: '',
+                })
+              }
+            })
+          }
+        }
+      })
+      wx.downloadFile({
+        url: res.data.fximg,
+        success: function (e) {
+        console.log(e.tempFilePath)
+        console.log(111)
+        if (e.statusCode === 200) {
+          that.setData({
+             fxphoto: e.tempFilePath
+           })
+                // var codeSrc = e.tempFilePath;
+                // that.sharePosteCanvas(productSrc, codeSrc, imgInfo);
+              } else {
+                console.log(222)
+                wx.showToast({
+                  title: '二维码下载失败！',
+                  icon: 'none',
+                  duration: 2000,
+                  success: function () {
+                    that.setData({
+                      fxphoto: e.tempFilePath
+                    })
+                  }
+                })
+              }
+            }
+          })
+          setTimeout(function () {
+            wx.hideToast()
+            that.createNewImg();
+            that.setData({
+              maskHidden: true
+            });
+          }, 1000)
+    })
+    
+    
 
     //产品图下载
-    wx.downloadFile({
-      url: this.data.bannerItem[0], //产品图
-      success: function (res) {
-        console.log(res.tempFilePath)
-        console.log(11)
-        if (res.statusCode === 200) {
-          that.setData({
-            path: res.tempFilePath
-          })
-        } else {
-          wx.showToast({
-            title: '背景下载失败！',
-            icon: 'none',
-            duration: 2000,
-            success: function () {
-              that.setData({
-                path: '',
-              })
-            }
-          })
-        }
-      }
-    })
-    wx.downloadFile({
-      url: this.data.itemData.erweima,
-      success: function (e) {
-      console.log(e.tempFilePath)
-      console.log(111)
-      if (e.statusCode === 200) {
-        that.setData({
-           fxphoto: e.tempFilePath
-         })
-              // var codeSrc = e.tempFilePath;
-              // that.sharePosteCanvas(productSrc, codeSrc, imgInfo);
-            } else {
-              console.log(222)
-              wx.showToast({
-                title: '二维码下载失败！',
-                icon: 'none',
-                duration: 2000,
-                success: function () {
-                  that.setData({
-                    fxphoto: e.tempFilePath
-                  })
-                }
-              })
-            }
-          }
-        })
-        setTimeout(function () {
-          wx.hideToast()
-          that.createNewImg();
-          that.setData({
-            maskHidden: true
-          });
-        }, 1000)
+    
   },
   //关闭海报
   closePoste() {

@@ -16,6 +16,7 @@
     <view class='dengji'>级别：{{item.dengjiname}}</view>
   </view>
  </view>
+ <view class="ts" wx:if='{{list.length == 0}}'>暂无下级</view>
  
   
   

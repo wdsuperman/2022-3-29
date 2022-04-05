@@ -27,11 +27,39 @@ App({
 
   },
   onLaunch: function () {
-    this.getUserInfo();
+    // this.getUserInfo();
     // wx.setStorage({
     //   key:"uid",
     //   data:"500138"
     // })
+    // this.overShare()
+  },
+  overShare: function () {
+    //监听路由切换
+    //间接实现全局设置分享内容
+    let uid = wx.getStorageSync('uid')
+    wx.onAppRoute(function (res) {
+      //获取加载的页面
+      let pages = getCurrentPages(),
+        //获取当前页面的对象
+        view = pages[pages.length - 1],
+        data;
+      if (view) {
+        data = view.data;
+        // console.log('是否重写分享方法', data.isOverShare);
+        if (!data.isOverShare) {
+          data.isOverShare = true;
+          view.onShareAppMessage = function () {
+            //你的分享配置
+            return {
+              title: '逗享平台',
+              path: '/pages/index/index?oneuid=' + uid,
+              imageUrl: 'http://meifa.rs1818.cn/Data/images/fenxiang.jpg',
+            };
+          }
+        }
+      }
+    })
   },
   getUserInfo: function (cb) {
     var that = this

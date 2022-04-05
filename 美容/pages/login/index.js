@@ -4,7 +4,6 @@ Page({
   data: {
     url: app.d.img
   },
-
   //获取用户的openid
   getUserProfile() {
     var that = this;
@@ -74,9 +73,10 @@ Page({
     })
     var user = app.data;
     var oneuid = app.d.oneuid
-    if (oneuid == '') {
+    if (!oneuid) {
       oneuid = 1
     }
+    console.log(oneuid)
     wx.request({
       url: app.d.hostUrl + 'Login/authlogin',
       method: 'post',
@@ -127,14 +127,19 @@ Page({
             key: 'uid',
             data: res.data.arr.ID,
           })
+          app.d.userId = res.data.arr.ID;
+          setTimeout(() => {
+            wx.navigateBack({
           
+            })
+          }, 2000);
         }
-        app.d.userId = userId;
-        that.tjone(); //把推荐人ID插入
+        
+        // that.tjone(); //把推荐人ID插入
       },
       fail: function (e) {
         wx.showToast({
-          title: '网络异常！err:authlogin',
+          title: '网络异常！',
           duration: 2000
         });
       },
@@ -166,7 +171,7 @@ Page({
         console.log(res);
         wx.hideLoading()
         wx.navigateBack({
-
+          
         })
         // var tel = res.data.tel  
         // if(tel){

@@ -5,10 +5,10 @@
   </swiper-item>
 </swiper>
 <view class="searchWrap">
-  <picker disabled value="{{index}}" range="{{array}}" bindtap="search" data-type="0">
-    {{array[index]}}
+  <view class="pick" bindtap="search" data-type="0">
+    {{city.name}}
     <image class="arrow" src="/images/slide0.png"></image>
-  </picker>
+  </view>
   <view class="search"  bindtap="search" data-type="1">
     <image src="/images/search1.png"></image>
     <view>搜索商品</view>
@@ -62,7 +62,7 @@
       <view class="xf"><text class="peo">消费{{item.shiyong}}</text><text class="buy">购买</text></view>
       <view class="shopTitle" catchtap="shop" data-shopid="{{item.shop_id}}">
         <image class="logo" src="{{item.logo}}"></image><text class="peo">{{item.shop_name}}</text>
-        <image class="arw" src="/images/recruit_icon_02.png"></image>
+        <!-- <image class="arw" src="/images/recruit_icon_02.png"></image> -->
       </view>
     </view>
   </view>

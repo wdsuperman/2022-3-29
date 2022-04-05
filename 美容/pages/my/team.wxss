@@ -63,3 +63,8 @@
   color: #fa8204;
   margin-left: 5rpx;
 }
+.ts{
+  text-align: center;
+  color: #999;
+  margin-top: 30rpx;
+}

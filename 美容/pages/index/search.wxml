@@ -1,13 +1,13 @@
 <view class="searchWrap">
-    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key='name'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{value}}" range-key='name'>
         <view class="picker">
-            <!-- {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}} -->
-            选择
+            <block wx:if='{{index == "200"}}'>请选择</block>
+            <block wx:else>{{value[index].name}}</block>
             <image class="arrow" src="/images/slide0.png"></image>
         </view>
     </picker>
     <view class="search">
         <image src="/images/search1.png"></image>
-        <view>搜索商品</view>
+        <input type="text" bindconfirm='submit'	confirm-type='search' placeholder="搜索商品" />
     </view>
 </view>

@@ -6,6 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    city:{
+      name:'请选择'
+    },
     location_x:0,
     location_y:0,
     text: "1.【评分标准】页可以查看不同年龄段的评分标准，通过首页选择对应的性别、类别和年龄。",
@@ -16,7 +19,6 @@ Page({
     wrapWidth: 0,
     banner: ['', '', '', ''],
     arr: ["zs", "ls", "ss"],
-    array: ['请选择'],
     index: 0,
     tab: 0,
     tabs: [{
@@ -68,13 +70,13 @@ Page({
         url: '',
         msg: '好评排行',
         type: false
-      },
-      {
-        title: '医生',
-        url: '',
-        msg: '名医大咖',
-        type: false
-      },
+      }
+      // {
+      //   title: '医生',
+      //   url: '',
+      //   msg: '名医大咖',
+      //   type: false
+      // },
     ],
     goods:[],
     mrs:[]
@@ -99,11 +101,11 @@ Page({
     }
   },
   shop(e){
-    console.log(e)
-    let {shopid} = e.currentTarget.dataset
-    wx.navigateTo({
-      url: `./business?shopid=${shopid}`,
-    })
+    // console.log(e)
+    // let {shopid} = e.currentTarget.dataset
+    // wx.navigateTo({
+    //   url: `./business?shopid=${shopid}`,
+    // })
   },
   fenlei(e){
     let {id} = e.currentTarget.dataset
@@ -153,8 +155,7 @@ Page({
   onLoad: function (options) {
     console.log(options)
     if(options){
-      let uid = options.oneuid
-      app.d.oneuid = uid
+      app.d.oneuid = options.oneuid
     }
     let that = this
     wx.getLocation({
@@ -169,6 +170,7 @@ Page({
     let uid = wx.getStorageSync('uid')
     let location_x = wx.getStorageSync('location_x')
     let location_y = wx.getStorageSync('location_y')
+    
     let date = {
       uid,
       location_x,
@@ -188,6 +190,16 @@ Page({
         mrs:res.data.mrs
       })
     })
+    if(!uid){
+      wx.showModal({
+        title:'为了您更好的体验,请先同意授权',
+        success(){
+          wx.navigateTo({
+            url: `/pages/login/index`,
+          })
+        }
+      })
+    }
   },
 
   /**
@@ -202,6 +214,12 @@ Page({
    */
   onShow: function () {
     this.initAnimation(this.data.text)
+    let city = wx.getStorageSync('city')
+    if(city){
+      this.setData({
+        city
+      })
+    }
   },
   initAnimation(text) {
     let that = this
@@ -289,7 +307,16 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function (e) {
+    let userinfo = wx.getStorageSync('userInfo')
+    var uid = wx.getStorageSync('uid')
+    var title = '好友' + userinfo.nickName + '邀请您加入逗享'
+    return {
+      title: title,
+      imageUrl: '',
+      path: '/pages/index/index?oneuid=' + uid,
+      success: function (res) {},
+      fail: function (res) {}
+    }
+  },
 })
