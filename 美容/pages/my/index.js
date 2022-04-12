@@ -36,12 +36,12 @@ Page({
                 title:'优惠券',
                 icon:'/images/08.png',
                 url:'./user-yhq',
-            },
-            {
-                title:'领券中心',
-                icon:'/images/09.png',
-                url:'./user-lingqu',
-            },
+            }
+            // {
+            //     title:'领券中心',
+            //     icon:'/images/09.png',
+            //     url:'./user-lingqu',
+            // },
             // {
             //     title:'店铺管理',
             //     icon:'',

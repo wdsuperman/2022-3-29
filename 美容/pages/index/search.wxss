@@ -1,8 +1,21 @@
 /* pages/index/search.wxss */
+page{
+  background-color: #f4f3f3;
+  padding-top: 155rpx;
+}
+.top{
+  /* height: 85rpx; */
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .searchWrap{
     display: flex;
     align-items: center;
-    height: 85rpx;
+    width: 100%;
+    justify-content: center;
   }
   .arrow{
     width: 13px;
@@ -10,7 +23,7 @@
       margin-left: 5rpx;
   }
   .search{
-    width: 540rpx;
+    width: 600rpx;
     height: 59rpx;
     border: 1rpx solid #aeaeae;
     color: #aaa;
@@ -18,11 +31,16 @@
     display: flex;
     border-radius: 100rpx;
     align-items: center;
+    margin-right: 20rpx;
+  }
+  input{
+    width: 100%;
   }
   .search image{
     width: 30rpx;
     height: 30rpx;
     margin: 0 18rpx;
+    flex-shrink: 0;
   }
   picker{
     font-size: 28rpx;
@@ -33,4 +51,107 @@
     width: 180rpx;
     text-align: center;
     justify-content: center;
+  }
+  .down2List{
+    width: 690rpx;
+    background-color: #ffffff;
+    border-radius: 20rpx;
+    margin: 0 auto;
+    padding: 25rpx 50rpx 25rpx 25rpx;
+    box-sizing: border-box;
+    /* height: 245rpx; */
+    margin-bottom: 30rpx;
+  }
+  .down2List{
+    display: flex;
+    align-items: center;
+  }
+  .downPic{
+    width: 245rpx;
+    height: 245rpx;
+    border-radius: 15rpx;
+    margin-right: 25rpx;
+    flex-shrink: 0;
+  }
+  .shopName{
+    width: 281rpx;
+    font-size: 28rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+  }
+  .shopPrice{
+    color: #f65e08;
+    font-size: 30rpx;
+    font-weight: bold;
+  }
+  .money{
+    font-size: 24rpx;
+  }
+  .shopdk{
+    font-size: 22rpx;
+    color: #ed4e65;
+    background-color: #fdf4f5;
+    border-radius: 2rpx;
+    border: solid 1rpx #ebe7e6;
+    height: 28rpx;
+    line-height: 28rpx;
+    font-weight: normal;
+    padding: 0 10rpx;
+  }
+  .peo{
+    color: #7b7b7b;
+    font-size: 24rpx;
+  }
+  .buy{
+    background-color: #fad00e;
+    border-radius: 5rpx;
+    color: #4e3400;
+    font-size: 26rpx;
+    margin-left: auto;
+    line-height: 48rpx;
+    height: 48rpx;
+    padding: 0 15rpx;
+  }
+  .logo{
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 5rpx;
+    margin-right: 15rpx;
+  }
+  .arw{
+    width: 15rpx;
+    height: 30rpx;
+    margin-left: auto;
+  }
+  .shopTitle,.xf{
+    display: flex;
+    align-items: center;
+  }
+  .down2listMsg{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 245rpx;
+    width: 100%;
+  }
+  .filter{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    
+  }
+  .active{
+    border-bottom: 3rpx solid rgba(208, 117, 143, 1);
+    color: rgba(208, 117, 143, 1);
+    font-weight: bold;
+  }
+  .filter>view{
+    width: 100rpx;
+    text-align: center;
   }

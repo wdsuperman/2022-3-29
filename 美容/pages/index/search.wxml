@@ -1,13 +1,28 @@
-<view class="searchWrap">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{value}}" range-key='name'>
-        <view class="picker">
-            <block wx:if='{{index == "200"}}'>请选择</block>
-            <block wx:else>{{value[index].name}}</block>
-            <image class="arrow" src="/images/slide0.png"></image>
+<view class="top">
+    <view class="searchWrap">
+        <view class="search">
+            <image src="/images/search1.png"></image>
+            <input type="text" bindconfirm='submit' confirm-type='search' placeholder="搜索商品" />
         </view>
-    </picker>
-    <view class="search">
-        <image src="/images/search1.png"></image>
-        <input type="text" bindconfirm='submit'	confirm-type='search' placeholder="搜索商品" />
+        <view>取消</view>
+    </view>
+    <view class="filter">
+        <view bindtap="changeFilter" data-name="{{item.name}}" wx:for="{{filter}}" wx:key="key" class="{{item.type ? 'active' : ''}}">
+            {{item.name}}
+        </view>
+    </view>
+</view>
+
+<view class="down2List" wx:for='{{type == "全部" ? list : type == "销量" ? list1 : list2}}' wx:key="key" bindtap="productId" data-productId="{{item.id}}">
+    <image class="downPic" src="https://meifa.rs1818.cn/Data/{{item.photo_x}}"></image>
+    <view class="down2listMsg">
+        <view class="shopName">{{item.product_name}}</view>
+        <view class="shopPrice"><text class="money">￥</text>{{item.price}} <text class="shopdk">积分抵扣{{item.pro_jf}}</text>
+        </view>
+        <view class="xf"><text class="peo">消费{{item.xn_sales}}</text><text class="buy">购买</text></view>
+        <view class="shopTitle" catchtap="shop" data-shopid="{{item.shop_id}}">
+            <image class="logo" src="https://meifa.rs1818.cn/Data/{{item.logo}}"></image><text class="peo">{{item.shop_name}}</text>
+            <!-- <image class="arw" src="/images/recruit_icon_02.png"></image> -->
+        </view>
     </view>
 </view>

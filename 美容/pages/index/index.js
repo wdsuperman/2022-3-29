@@ -9,6 +9,7 @@ Page({
     city:{
       name:'请选择'
     },
+    index:200,
     location_x:0,
     location_y:0,
     text: "1.【评分标准】页可以查看不同年龄段的评分标准，通过首页选择对应的性别、类别和年龄。",
@@ -18,8 +19,6 @@ Page({
     textWidth: 0,
     wrapWidth: 0,
     banner: ['', '', '', ''],
-    arr: ["zs", "ls", "ss"],
-    index: 0,
     tab: 0,
     tabs: [{
         img: '',
@@ -81,6 +80,14 @@ Page({
     goods:[],
     mrs:[]
   },
+  bindPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log(e)
+    this.setData({
+      index: e.detail.value
+    })
+    wx.setStorageSync('city', this.data.value[e.detail.value])
+  },
   search(e){
     let {type} = e.currentTarget.dataset
       wx.navigateTo({
@@ -138,12 +145,6 @@ Page({
       tab: ind
     })
   },
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
   banner() {
     wx.navigateTo({
       url: '/pages/index/gold1',
@@ -153,6 +154,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let city = wx.getStorageSync('city')
+    api.getAPI('shangchang/getShopcity').then(res => {
+        console.log(res)
+        this.setData({
+            value:res.data.city
+        })
+        if(city){
+            res.data.city.map((i,x) => {
+                if(i.id == city.id){
+                    this.setData({
+                        index:x
+                    })
+                }
+            })
+        }
+    })
     console.log(options)
     if(options){
       app.d.oneuid = options.oneuid

@@ -1,15 +1,17 @@
 <swiper indicator-dots>
-  <swiper-item class="banner" wx:key='key' wx:for="{{banner}}" bindtap="top" data-type="{{item.type}}"
-    data-id="{{item.id}}" data-action="{{item.action}}">
+  <swiper-item class="banner" wx:key='key' wx:for="{{banner}}" bindtap="top" data-type="{{item.type}}" data-id="{{item.id}}" data-action="{{item.action}}">
     <image src="{{item.photo}}"></image>
   </swiper-item>
 </swiper>
 <view class="searchWrap">
-  <view class="pick" bindtap="search" data-type="0">
-    {{city.name}}
-    <image class="arrow" src="/images/slide0.png"></image>
-  </view>
-  <view class="search"  bindtap="search" data-type="1">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{value}}" range-key='name'>
+        <view class="picker">
+            <block wx:if='{{index == "200"}}'>请选择</block>
+            <block wx:else>{{value[index].name}}</block>
+            <image class="arrow" src="/images/slide0.png"></image>
+        </view>
+    </picker>
+  <view class="search" bindtap="search" data-type="1">
     <image src="/images/search1.png"></image>
     <view>搜索商品</view>
   </view>
@@ -59,9 +61,9 @@
       <view class="shopName">{{item.name}}</view>
       <view class="shopPrice"><text class="money">￥</text>{{item.price}} <text class="shopdk">积分抵扣{{item.pro_jf}}</text>
       </view>
-      <view class="xf"><text class="peo">消费{{item.shiyong}}</text><text class="buy">购买</text></view>
+      <view class="xf"><text class="peo">消费{{item.xn_sales}}</text><text class="buy">购买</text></view>
       <view class="shopTitle" catchtap="shop" data-shopid="{{item.shop_id}}">
-        <image class="logo" src="{{item.logo}}"></image><text class="peo">{{item.shop_name}}</text>
+        <image class="logo" src="https://meifa.rs1818.cn/Data/{{item.logo}}"></image><text class="peo">{{item.shop_name}}</text>
         <!-- <image class="arw" src="/images/recruit_icon_02.png"></image> -->
       </view>
     </view>

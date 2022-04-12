@@ -16,7 +16,7 @@
         <view class="hodong">
             <image class="moneyIcon" src="/images/icon.png"></image>
             <view>
-                <view class="jf">{{res.jifen}}积分</view>
+                <view class="jf">{{res.jifen}}金币</view>
                 <view class="dk">店内活动抵扣金额</view>
             </view>
         </view>
@@ -27,7 +27,7 @@
         <view>
             <view class="yuee"><image src="/images/01.png"></image>账户余额</view>
             <view class="jbee">我的余额：{{res.recharge}}</view>
-            <view class="msg">可用于商品支付，现在购买价格更优惠</view>
+            <view class="msg">余额可用于商品支付，不定期有充值优惠敬请期待</view>
             <view class="btn">
                 <view bindtap="yuechongzhi">充值</view>
                 <view bindtap="yuetx">提现</view>

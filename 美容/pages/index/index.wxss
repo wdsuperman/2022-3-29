@@ -270,7 +270,9 @@ text-overflow: ellipsis;
   height: 245rpx;
   width: 100%;
 }
-
+.picker{
+  padding-left: 20rpx;
+}
 
 
 .notice {

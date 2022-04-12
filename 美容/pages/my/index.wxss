@@ -1,4 +1,7 @@
 /* pages/my/index.wxss */
+/* page{
+    font-size: 30rpx;
+} */
 .button-hover{
     background-color: #fff;
 }
@@ -12,7 +15,7 @@ button{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    font-size: 26rpx;
+    font-size: 28rpx;
     line-height: 84rpx;
     background-color: #fff;
     border: none;
@@ -60,6 +63,7 @@ button{
 .user_name{
     margin-left: 180rpx;
     margin-top: 20rpx;
+    font-weight: bold;
 }
 .userInfo{
     display: flex;
@@ -87,10 +91,10 @@ button{
     margin-bottom: 20rpx;
 }
 .jf{
-    font-size: 26rpx;
+    font-size: 28rpx;
 }
 .dk{
-    font-size: 24rpx;
+    font-size: 26rpx;
 }
 .add{
     display: flex;
@@ -114,17 +118,18 @@ button{
 .yuee{
     display: flex;
     align-items: center;
-    font-size: 28rpx;
+    font-size:30rpx;
     font-weight: bold;
 }
 .jbee{
-    font-size: 24rpx;
-    color: #bbb;
+    font-size: 30rpx;
+    margin-top: 15rpx;
 }
 .msg{
     font-size: 24rpx;
     line-height: 30rpx;
     margin-top: 15rpx;
+    color: #bbb;
 }
 .btn{
     display: flex;
@@ -132,15 +137,15 @@ button{
     justify-content: space-around;
 }
 .btn>view{
-    width: 98rpx;
-    height: 40rpx;
+    width: 110rpx;
+    height: 45rpx;
     color: #fff;
-    font-size: 24rpx;
-    line-height: 40rpx;
+    font-size: 30rpx;
+    line-height: 45rpx;
     text-align: center;
     background-color: #fe8c81;
     border-radius: 10rpx;
-    margin-top: 50rpx;
+    margin-top: 30rpx;
     background-image: linear-gradient(#fd8e7d, #fd7569);
 }
 .btnList{
@@ -149,7 +154,7 @@ button{
 }
 .xieyi{
     width: 120rpx;
-    font-size: 26rpx;
+    font-size: 30rpx;
     border-bottom: 1rpx solid #ccc;
     color: #ccc;
     text-align: center;
