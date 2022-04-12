@@ -18,11 +18,12 @@ Page({
       {
         name: '销量',
         type: false,
-
+        img:'/images/p1.png'
       },
       {
         name: '价格',
         type: false,
+        img:'/images/p1.png'
       },
     ]
   },
@@ -62,8 +63,9 @@ Page({
     } = e.currentTarget.dataset
     if(this.data.type == name){
       this.setData({
-        type1:!this.data.type1
+        type1:!this.data.type1,
       })
+      
     }else{
       this.setData({
         type1:true
@@ -79,16 +81,18 @@ Page({
       }),
       type:name
     })
-    // if(this.data.type == '销量'){
-    //     this.setData({
-    //       list1:this.data.list1.reverse()
-    //     })
-    // }
-    // if(this.data.type == '价格'){
-    //   this.setData({
-    //     list2:this.data.list2.reverse()
-    //   })
-    // }
+    
+    if(this.data.type == '销量' || this.data.type1 == true){
+      this.setData({
+        list1:this.data.list1.reverse()
+      })
+    }
+    if(this.data.type == '价格'|| this.data.type1 == true){
+      this.setData({
+        list2:this.data.list2.reverse()
+      })
+    }
+    
   },
   submit(e) {
     let uid = wx.getStorageSync('uid')
@@ -132,6 +136,7 @@ Page({
       } else {
         this.setData({
           list1:res.data.product.sort(this.xl),
+          list11:res.data.product.sort(this.xl),
         })
       }
     })
@@ -141,6 +146,7 @@ Page({
       } else {
         this.setData({
           list2:res.data.product.sort(this.px),
+          list22:res.data.product.sort(this.px),
         })
       }
     })

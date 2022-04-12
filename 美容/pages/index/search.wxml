@@ -9,6 +9,7 @@
     <view class="filter">
         <view bindtap="changeFilter" data-name="{{item.name}}" wx:for="{{filter}}" wx:key="key" class="{{item.type ? 'active' : ''}}">
             {{item.name}}
+            <image class="p" src="{{item.img}}"></image>
         </view>
     </view>
 </view>

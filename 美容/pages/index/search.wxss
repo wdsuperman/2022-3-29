@@ -154,4 +154,10 @@ page{
   .filter>view{
     width: 100rpx;
     text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .p{
+    width: 30rpx;
+    height: 30rpx;
   }
