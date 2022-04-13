@@ -37,9 +37,10 @@ page{
     margin-top: 20rpx;
 }
 .bj{
-    width: 30rpx;
-    height: 30rpx;
+    width: 50rpx;
+    height: 50rpx;
     padding: 10rpx;
+    flex-shrink: 0;
 }
 .listTop{
     display: flex;
@@ -50,17 +51,24 @@ page{
     box-sizing: border-box ;
 }
 .name{
-    font-size: 30rpx;
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
 }
 .name text{
     color: #959394;
+    margin-left: 10rpx;
 }
 .address,.detailed{
-    font-size: 27rpx;
-    line-height: 40rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+.detailed{
+    color: #959394;
+    width: 95%;
 }
 .address text{
     color: #ff5345;
+    margin-right: 10rpx;
 }
 .listDown{
     color: #959394;

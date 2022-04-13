@@ -41,11 +41,16 @@ Page({
             if (res.data.status == 1) {
                 this.setData({
                     list: res.data.pro,
-                    cidlist: res.data.cidlist.map(i => {
-                        i.type = false
-                        return i
-                    })
+                    
                 })
+                if(res.data.cidlist){
+                    this.setData({
+                        cidlist: res.data.cidlist.map(i => {
+                            i.type = false
+                            return i
+                        })
+                    })
+                }
             } else {
                 wx.showToast({
                     title: res.data.err,

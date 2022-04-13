@@ -1,6 +1,8 @@
 {
     "pages": [
         
+        "pages/my/address",
+        "pages/my/add_address",
         "pages/index/index",
         "pages/index/search",
         "pages/index/pay_details",
@@ -14,7 +16,6 @@
         "pages/index/gold",
         "pages/index/staff",
         "pages/index/business",
-        "pages/my/add_address",
         "pages/cart/index",
         "pages/my/yuetx",
         "pages/my/txshenqing",
@@ -25,7 +26,6 @@
         "pages/my/user-yhq",
         "pages/my/shoucang",
         "pages/my/user-lingqu",
-        "pages/my/address",
         "pages/my/ysjb",
         "pages/my/xieyi",
         "pages/index/gold1"

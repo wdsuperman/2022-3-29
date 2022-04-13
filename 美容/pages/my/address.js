@@ -1,4 +1,5 @@
 // pages/my/address.js
+const api = require('../../api.js')
 Page({
 
     /**
@@ -6,66 +7,96 @@ Page({
      */
     data: {
         list:[
-            {
-                name:'名',
-                phone:'123123123',
-                address:'省市区',
-                detailed:'详细地址',
-                type:true,
-            },
-            {
-                name:'名',
-                phone:'123123123',
-                address:'省市区',
-                detailed:'详细地址',
-                type:false,
-            },
-            {
-                name:'名',
-                phone:'123123123',
-                address:'省市区',
-                detailed:'详细地址',
-                type:false,
-            },
         ],
     },
     getAddress(){
+        let uid = wx.getStorageSync('uid')
+        let that = this
         wx.chooseAddress({
             success (res) {
-              console.log(res.userName)
-              console.log(res.postalCode)
-              console.log(res.provinceName)
-              console.log(res.cityName)
-              console.log(res.countyName)
-              console.log(res.detailInfo)
-              console.log(res.nationalCode)
-              console.log(res.telNumber)
+              let data = {
+                address:res.detailInfo,
+                is_default:0,
+                name:res.userName,
+                tel:res.telNumber,
+                sheng:res.provinceName,
+                city:res.cityName,
+                qv:res.countyName,
+                uid
+              }
+              api.getAPI('address/add_adds',data).then( res => {
+                console.log(res)
+                if(res.data.status == 1){
+                  wx.showToast({
+                    title: '获取成功',
+                  })
+                  setTimeout(() => {
+                      that.onShow()
+                  }, 1000);
+                }
+              })
             }
           })
     },
     click(e){
-        let {ind} = e.currentTarget.dataset
-        this.setData({
-            list:this.data.list.map((i,index) => {
-                i.type = false
-                if(index == ind){
-                    i.type = true
-                }
-                return i
-            })
+        let uid = wx.getStorageSync('uid')
+        let {id} = e.currentTarget.dataset
+        api.getAPI('address/set_default',{uid,addr_id:id}).then(res => {
+            if(res.data.status == 1){
+                wx.showToast({
+                  title: '设置成功',
+                })
+                this.setData({
+                    list:this.data.list.map((i) => {
+                        i.is_default = 0
+                        if(i.id == id){
+                            i.is_default = 1
+                        }
+                        return i
+                    })
+                })
+            }
         })
+        
     },
     del(e){
-        console.log('删除')
+        let uid = wx.getStorageSync('uid')
+        let {id} = e.currentTarget.dataset
+        api.getAPI('address/del_adds',{uid,id_arr:id}).then(res => {
+            if(res.data.status == 1){
+                wx.showToast({
+                  title: '删除成功',
+                  mask:true,
+                })
+                this.setData({
+                    list:this.data.list.filter(i => i.id != id)
+                })
+            }else{
+                wx.showToast({
+                  title: res.data.err,
+                  icon:'none'
+                })
+            }
+        })
+        
     },
     bj(e){
-        console.log('编辑')
+        let {id} = e.currentTarget.dataset
+        console.log(id)
+        wx.navigateTo({
+          url: `/pages/my/add_address?id=${id}`,
+        })
+    },
+    add(){
+        wx.navigateTo({
+          url: '/pages/my/add_address',
+        })
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        
     },
 
     /**
@@ -79,7 +110,13 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        api.getAPI('address/index',{uid:wx.getStorageSync('uid')}).then(res => {
+            if(res.data.status == 1){
+                this.setData({
+                    list:res.data.adds
+                })
+            }
+        })
     },
 
     /**
